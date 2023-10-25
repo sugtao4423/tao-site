@@ -1,0 +1,61 @@
+@use '@/styles/variables';
+
+%icon-base {
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  @extend %icon-base;
+}
+
+@keyframes mask-fade-in {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: rgb(0 0 0 / 50%);
+  }
+}
+
+.mask {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 50%);
+  animation: mask-fade-in 0.5s ease;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  max-width: 80%;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: variables.$color-green;
+  transition: transform 0.5s ease;
+  transform: translateX(20rem);
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.closeWrapper {
+  text-align: right;
+}
+
+.close {
+  @extend %icon-base;
+}
+
+.items {
+  padding: 0 1.4rem;
+}
