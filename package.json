@@ -13,6 +13,7 @@
     "prettier:fix": "prettier --write '{**/*,*}.{js,jsx,ts,tsx,css,scss,json}'"
   },
   "dependencies": {
+    "bootstrap": "5.3.2",
     "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18"
