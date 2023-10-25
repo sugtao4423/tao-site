@@ -1,0 +1,16 @@
+// Override Bootstrap variables
+$body-bg: #2e3842;
+
+/* stylelint-disable value-keyword-case */
+$font-family-sans-serif: -apple-system, 'BlinkMacSystemFont',
+  'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif,
+  'Segoe UI Emoji';
+$font-family-monospace:
+  ui-monospace,
+  SFMono-Regular,
+  SF Mono,
+  Menlo,
+  Consolas,
+  Liberation Mono,
+  monospace;
+/* stylelint-enable value-keyword-case */
