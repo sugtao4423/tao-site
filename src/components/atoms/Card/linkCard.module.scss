@@ -1,0 +1,12 @@
+@use '@/styles/variables';
+
+.card {
+  padding: 12px;
+  color: variables.$body-color;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow:
+    0 3px 6px rgb(0 0 0 / 16%),
+    0 3px 6px rgb(0 0 0 / 23%);
+}
