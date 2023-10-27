@@ -1,0 +1,14 @@
+@use '@/styles/variables';
+
+.wrapper {
+  padding: 2rem 0 2.5rem;
+  background-color: variables.$deep-purple-200;
+}
+
+.items {
+  margin-top: -0.8rem;
+}
+
+.item {
+  margin-top: 1.8rem;
+}
