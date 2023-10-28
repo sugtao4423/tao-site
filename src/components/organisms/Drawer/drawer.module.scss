@@ -11,6 +11,11 @@
   top: 12px;
   right: 16px;
   @extend %icon-base;
+
+  &.menuBorder {
+    stroke: #000;
+    stroke-width: 8px;
+  }
 }
 
 @keyframes mask-fade-in {

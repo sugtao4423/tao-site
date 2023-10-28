@@ -13,6 +13,7 @@ import styles from './drawer.module.scss'
 
 type Props = {
   data: DrawerData[]
+  menuBorder?: boolean
 }
 
 export const Drawer: React.FC<Props> = (props) => {
@@ -22,7 +23,12 @@ export const Drawer: React.FC<Props> = (props) => {
 
   return (
     <div>
-      <BarIcon className={styles.menu} onClick={onOpen} />
+      <BarIcon
+        className={classNames(styles.menu, {
+          [styles.menuBorder]: props.menuBorder,
+        })}
+        onClick={onOpen}
+      />
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
       {open && <div className={classNames(styles.mask)} onClick={onClose} />}
       <div
