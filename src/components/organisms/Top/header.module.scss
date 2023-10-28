@@ -1,3 +1,4 @@
+@use '@/styles/variables';
 @use '@/styles/breakpoints';
 
 .header {
@@ -34,7 +35,7 @@
 
 .name {
   margin: 0.4rem 0 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: variables.$font-username;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
@@ -47,7 +48,7 @@
 
 .screenName {
   margin: 2px 0 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: variables.$font-username;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.5;
