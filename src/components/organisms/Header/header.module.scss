@@ -1,0 +1,24 @@
+.bannerWrapper {
+  position: relative;
+}
+
+.banner {
+  min-height: 20vh;
+  max-height: 38vh;
+  object-fit: cover;
+  object-position: 62% 0;
+  filter: brightness(0.38);
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.25rem;
+  transform: translateY(-50%);
+}
