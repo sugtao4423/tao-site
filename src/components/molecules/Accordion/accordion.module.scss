@@ -1,0 +1,73 @@
+@use '@/styles/variables';
+@use '@/styles/breakpoints';
+
+$border: 1px solid variables.$color-gray-300;
+$border-radius: 8px;
+
+@mixin details-padding($mini-y: false) {
+  $padding-y: 1rem;
+  $padding-x: 0.8rem;
+
+  padding: if($mini-y, calc($padding-y * 0.5), $padding-y) $padding-x;
+
+  @include breakpoints.media-up(md) {
+    padding-right: calc($padding-x * 1.5);
+    padding-left: calc($padding-x * 1.5);
+  }
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  @include details-padding(false);
+
+  &::marker,
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  & > .arrow {
+    width: 1.5em;
+    transition: transform 0.2s ease-in-out;
+    transform: rotate(-90deg);
+  }
+
+  & > .title {
+    margin-left: 4px;
+  }
+}
+
+.inner {
+  background-color: variables.$color-gray-50;
+  border-top: $border;
+  @include details-padding(true);
+}
+
+.details {
+  border: $border;
+
+  &[open] > .summary {
+    background-color: variables.$color-indigo-50;
+
+    & > .arrow {
+      transform: unset;
+    }
+  }
+
+  &:first-of-type,
+  &:first-of-type > .summary {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  &:last-of-type,
+  &:last-of-type > .inner {
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  & + .details {
+    border-top: none;
+  }
+}
