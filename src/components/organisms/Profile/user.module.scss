@@ -1,0 +1,54 @@
+@use '@/styles/variables';
+
+.wrapper {
+  text-align: center;
+}
+
+.icon {
+  width: 8rem;
+  border-radius: 8px;
+}
+
+%user-font-base {
+  margin: 0.2rem 0 0;
+  font-family: variables.$font-username;
+  line-height: 1;
+}
+
+.userName {
+  @extend %user-font-base;
+
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.screenName {
+  @extend %user-font-base;
+
+  font-size: 1.3rem;
+  color: variables.$color-gray-700;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4rem;
+  font-size: 1.4rem;
+}
+
+.link {
+  display: block;
+  padding: 1rem;
+  margin-left: 0.6rem;
+  color: variables.$body-color;
+  border: variables.$color-gray-600 solid 1px;
+  border-radius: 50%;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  & > svg {
+    display: block;
+  }
+}

@@ -1,0 +1,27 @@
+.titleMargin {
+  margin-bottom: 1.2em;
+}
+
+.content {
+  margin-top: 1.8rem;
+  line-height: 1.75;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.enumList {
+  $indent-size: 0.4em;
+
+  padding-left: 1.4rem;
+
+  & > li {
+    padding-left: $indent-size;
+    text-indent: -$indent-size;
+
+    & > span {
+      font-size: 0.92rem;
+    }
+  }
+}
