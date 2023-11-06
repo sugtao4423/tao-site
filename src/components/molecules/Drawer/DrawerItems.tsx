@@ -17,6 +17,8 @@ export const DrawerItems: React.FC<Props> = (props) => (
         <Link
           className={styles.itemLink}
           href={item.href}
+          rel={item.asNewTab ? 'noopener noreferrer' : undefined}
+          target={item.asNewTab ? '_blank' : undefined}
           onClick={props.onClose}
         >
           {item.title}

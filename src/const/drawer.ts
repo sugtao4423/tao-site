@@ -1,5 +1,6 @@
 import { DrawerData } from '@/common/interfaces/drawer'
 import { Routes } from '@/common/routes'
+import { ProductItems } from '@/const/product'
 
 export const NormalDrawerData: DrawerData[] = [
   {
@@ -26,4 +27,12 @@ export const NormalDrawerData: DrawerData[] = [
     title: 'ServerStatus',
     href: Routes.serverStatus,
   },
+]
+
+export const ProductsDrawerData: DrawerData[] = [
+  {
+    title: '制作物',
+    href: Routes.products,
+  },
+  ...ProductItems,
 ]

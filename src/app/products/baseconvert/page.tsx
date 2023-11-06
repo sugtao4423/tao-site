@@ -3,7 +3,7 @@ import { CommonLayout } from '@/layouts/CommonLayout'
 
 export default function Page(): React.ReactNode {
   return (
-    <CommonLayout title="進数変換">
+    <CommonLayout productsDrawer title="進数変換">
       <BaseConvert />
     </CommonLayout>
   )

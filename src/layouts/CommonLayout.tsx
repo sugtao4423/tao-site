@@ -1,7 +1,7 @@
 import { PropsWithChildren } from '@/@types/react'
 import { Footer } from '@/components/organisms/Footer/Footer'
 import { Header } from '@/components/organisms/Header/Header'
-import { NormalDrawerData } from '@/const/drawer'
+import { NormalDrawerData, ProductsDrawerData } from '@/const/drawer'
 
 import styles from './commonLayout.module.scss'
 
@@ -11,7 +11,9 @@ type Props = {
 } & PropsWithChildren
 
 export const CommonLayout: React.FC<Props> = (props) => {
-  const drawerData = props.productsDrawer ? [] : NormalDrawerData
+  const drawerData = props.productsDrawer
+    ? ProductsDrawerData
+    : NormalDrawerData
   return (
     <>
       <Header drawerData={drawerData} title={props.title} />

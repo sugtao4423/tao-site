@@ -9,7 +9,7 @@ import styles from './page.module.scss'
 
 export default function Page(): React.ReactNode {
   return (
-    <CommonLayout title="制作物">
+    <CommonLayout productsDrawer title="制作物">
       <H2>制作物一覧</H2>
       <div>有用そうと思ったものを適当に作りました</div>
       <div className="row">
