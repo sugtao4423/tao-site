@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { Routes } from '@/common/routes'
 import { Banner } from '@/components/atoms/Image/Banner'
 import { Icon } from '@/components/atoms/Image/Icon'
 import { ChevronRightIcon } from '@/components/icons/ChevronRightIcon'
@@ -16,7 +17,7 @@ export const Header: React.FC = () => (
       <div className={styles.note}>Twitterだいすき人間</div>
     </div>
     <div className={styles.profileLink}>
-      <Link href="/profile">
+      <Link href={Routes.profile}>
         詳しくはProfileページへ
         <ChevronRightIcon className={styles.rightIcon} />
       </Link>

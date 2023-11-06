@@ -15,6 +15,7 @@ export enum Links {
   blog = 'https://blog.sugtao4423.xyz',
   ameba = 'https://ameblo.jp/sug703ta4423',
 
+  blogChinachuClient = 'https://blog.sugtao4423.xyz/20151006-chinachu-client/',
   githubLoD = `${github}/Lightning-of-Dark`,
 }
 

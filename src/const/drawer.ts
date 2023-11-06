@@ -1,28 +1,29 @@
 import { DrawerData } from '@/common/interfaces/drawer'
+import { Routes } from '@/common/routes'
 
 export const NormalDrawerData: DrawerData[] = [
   {
     title: 'Home',
-    href: '/',
+    href: Routes.root,
   },
   {
     title: 'My Profile',
-    href: '/profile',
+    href: Routes.profile,
   },
   {
     title: '制作物',
-    href: '/products',
+    href: Routes.products,
   },
   {
     title: 'PCスペック',
-    href: '/PCspec',
+    href: Routes.pcSpec,
   },
   {
     title: '淫夢音声素材',
-    href: '/inm',
+    href: Routes.inm,
   },
   {
     title: 'ServerStatus',
-    href: '/ServerStatus',
+    href: Routes.serverStatus,
   },
 ]
