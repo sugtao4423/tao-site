@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import { PropsWithClassName } from '@/@types/react'
-import BannerImage from '@/asstes/anz.png'
+import BannerImage from '@/assets/anz.png'
 
 export const Banner: React.FC<PropsWithClassName> = (props) => (
   <Image
