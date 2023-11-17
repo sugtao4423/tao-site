@@ -1,5 +1,6 @@
 import { KancolleBgmUrls } from '@/components/organisms/Products/KancolleUrls/KancolleBgmUrls'
 import { KancolleCharUrls } from '@/components/organisms/Products/KancolleUrls/KancolleCharUrls'
+import { KancolleHistory } from '@/components/organisms/Products/KancolleUrls/KancolleHistory'
 import { CommonLayout } from '@/layouts/CommonLayout'
 import { KancolleUrlsServer } from '@/services/products/kancolleUrls/server'
 
@@ -12,7 +13,11 @@ export default function Page(): React.ReactNode {
   const battleBgms = server.getBattleBgmData()
 
   return (
-    <CommonLayout productsDrawer title="艦これURLs">
+    <CommonLayout
+      productsDrawer
+      bottomEl={<KancolleHistory />}
+      title="艦これURLs"
+    >
       <KancolleCharUrls ships={ships} />
       <KancolleBgmUrls
         battleBgms={battleBgms}

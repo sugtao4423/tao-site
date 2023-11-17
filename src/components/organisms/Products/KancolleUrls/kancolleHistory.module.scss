@@ -1,0 +1,24 @@
+@use '@/styles/variables';
+
+.history {
+  padding: 2rem 0 1rem;
+  color: #fff;
+  background-color: variables.$color-blue-gray-600;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: rgb(255 255 255 / 80%);
+    }
+  }
+
+  code {
+    padding: 0.2em 0.4em;
+    margin-right: 0.2em;
+    font-size: 85%;
+    color: #fff;
+    background-color: rgb(175 184 193 / 20%);
+    border-radius: 6px;
+  }
+}

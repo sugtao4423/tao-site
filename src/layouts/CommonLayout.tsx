@@ -8,6 +8,7 @@ import styles from './commonLayout.module.scss'
 type Props = {
   title: string
   productsDrawer?: boolean
+  bottomEl?: React.ReactNode
 } & PropsWithChildren
 
 export const CommonLayout: React.FC<Props> = (props) => {
@@ -21,6 +22,7 @@ export const CommonLayout: React.FC<Props> = (props) => {
         <div className="container">
           <div className={styles.content}>{props.children}</div>
         </div>
+        {props.bottomEl}
       </div>
       <Footer />
     </>
