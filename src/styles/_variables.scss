@@ -16,6 +16,8 @@ $font-family-monospace:
   monospace;
 /* stylelint-enable value-keyword-case */
 
+$code-color: $body-color;
+$code-font-size: 85%;
 $link-color: #5c6bc0; // $color-indigo-400
 $link-shade-percentage: 45%;
 $input-bg: #fff;
