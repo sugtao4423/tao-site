@@ -11,3 +11,6 @@ export enum Routes {
 
   apiHomeNetworkDiagramUrl = '/api/HomeNetworkDiagramUrl',
 }
+
+export const getInmHomobiPath = (name: string): string =>
+  `${Routes.inm}/${name}`
