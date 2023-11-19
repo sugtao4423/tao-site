@@ -8,4 +8,6 @@ export enum Routes {
   pcSpec = '/PCspec',
   inm = '/inm',
   serverStatus = '/ServerStatus',
+
+  apiHomeNetworkDiagramUrl = '/api/HomeNetworkDiagramUrl',
 }
