@@ -21,4 +21,17 @@ $border: 1px solid variables.$color-gray-300;
       border: $border;
     }
   }
+
+  &.noVerticalDivider > tbody > tr > td {
+    border-right: none;
+    border-left: none;
+
+    &:first-child {
+      border-left: $border;
+    }
+
+    &:last-child {
+      border-right: $border;
+    }
+  }
 }

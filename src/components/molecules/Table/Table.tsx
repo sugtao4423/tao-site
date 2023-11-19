@@ -7,11 +7,16 @@ import styles from './table.module.scss'
 
 type Props = {
   data: TableData<number>
+  noVerticalDivider?: boolean
 } & PropsWithClassName
 
 export const Table: React.FC<Props> = (props) => (
   <div className={classNames(styles.wrapper, props.className)}>
-    <table className={styles.table}>
+    <table
+      className={classNames(styles.table, {
+        [styles.noVerticalDivider]: props.noVerticalDivider,
+      })}
+    >
       <tbody>
         {props.data.map((d, i) => (
           <tr key={i}>
