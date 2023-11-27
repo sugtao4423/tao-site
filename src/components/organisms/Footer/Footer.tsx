@@ -1,12 +1,9 @@
 import styles from './footer.module.scss'
 
-export const Footer: React.FC = () => {
-  const year = new Date().getFullYear()
-  return (
-    <footer className={styles.footer}>
-      <span>taoのサイト</span>
-      <span>&copy;</span>
-      <span>{`${year}.`}</span>
-    </footer>
-  )
-}
+export const Footer: React.FC = () => (
+  <footer className={styles.footer}>
+    <span>&copy;</span>
+    <span>2015</span>
+    <span>@sugtao4423</span>
+  </footer>
+)
