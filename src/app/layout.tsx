@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+
+import { PropsWithChildren } from '@/@types/react'
 import '@/styles/global.scss'
 
 export const metadata: Metadata = {
@@ -8,14 +10,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}): React.ReactNode {
+export default function RootLayout(props: PropsWithChildren): React.ReactNode {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ja">
+      <body>{props.children}</body>
     </html>
   )
 }
