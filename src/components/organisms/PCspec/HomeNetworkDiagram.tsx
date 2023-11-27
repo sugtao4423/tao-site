@@ -15,7 +15,7 @@ import styles from './homeNetworkDiagram.module.scss'
 const getNetworkDiagram = async (): Promise<HomeNetworkDiagramUrl | null> => {
   try {
     const res = await axios.get<HomeNetworkDiagramUrl>(
-      Routes.apiHomeNetworkDiagramUrl
+      Routes.apiHomeNetworkDiagram
     )
     return res.data
   } catch {
