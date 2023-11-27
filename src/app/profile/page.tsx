@@ -1,3 +1,5 @@
+import { Metadata } from 'next'
+
 import { Devices } from '@/components/organisms/Profile/Devices'
 import { Overview } from '@/components/organisms/Profile/Overview'
 import { TwitterClients } from '@/components/organisms/Profile/TwitterClients'
@@ -6,9 +8,13 @@ import { CommonLayout } from '@/layouts/CommonLayout'
 
 import styles from './page.module.scss'
 
+export const metadata: Metadata = {
+  title: 'My Profile',
+}
+
 export default function Page(): React.ReactNode {
   return (
-    <CommonLayout title="My Profile">
+    <CommonLayout title={metadata.title as string}>
       <User />
       <Overview className={styles.contents} />
       <Devices className={styles.contents} />

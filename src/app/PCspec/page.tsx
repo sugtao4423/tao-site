@@ -1,3 +1,5 @@
+import { Metadata } from 'next'
+
 import { H2 } from '@/components/atoms/Heading/H2'
 import { HomeNetworkDiagram } from '@/components/organisms/PCspec/HomeNetworkDiagram'
 import { Mac2ndSpec } from '@/components/organisms/PCspec/Mac2ndSpec'
@@ -14,9 +16,13 @@ import { CommonLayout } from '@/layouts/CommonLayout'
 
 import styles from './page.module.scss'
 
+export const metadata: Metadata = {
+  title: 'PCスペック',
+}
+
 export default function Page(): React.ReactNode {
   return (
-    <CommonLayout title="PCスペック">
+    <CommonLayout title={metadata.title as string}>
       <div>
         <Main3rdSpec />
         <Mac4thSpec />

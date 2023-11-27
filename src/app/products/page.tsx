@@ -1,3 +1,5 @@
+import { Metadata } from 'next'
+
 import classNames from 'classnames'
 
 import { H2 } from '@/components/atoms/Heading/H2'
@@ -7,9 +9,13 @@ import { CommonLayout } from '@/layouts/CommonLayout'
 
 import styles from './page.module.scss'
 
+export const metadata: Metadata = {
+  title: '制作物',
+}
+
 export default function Page(): React.ReactNode {
   return (
-    <CommonLayout productsDrawer title="制作物">
+    <CommonLayout productsDrawer title={metadata.title as string}>
       <H2>制作物一覧</H2>
       <div>有用そうと思ったものを適当に作りました</div>
       <div className="row">

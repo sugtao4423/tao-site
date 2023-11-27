@@ -1,6 +1,12 @@
+import { Metadata } from 'next'
+
 import { HomobiAudioList } from '@/components/organisms/Inm/HomobiAudioList'
 import { CommonLayout } from '@/layouts/CommonLayout'
 import { InmServer } from '@/services/inm'
+
+export const metadata: Metadata = {
+  title: '淫夢音声素材',
+}
 
 type Props = {
   params: {
