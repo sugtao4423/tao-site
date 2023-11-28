@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     template: '%s | taoのサイト',
     default: 'taoのサイト',
   },
+  themeColor: '#55acee',
 }
 
 export default function RootLayout(props: PropsWithChildren): React.ReactNode {
