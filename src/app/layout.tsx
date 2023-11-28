@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 import { PropsWithChildren } from '@/@types/react'
+import { GaScript } from '@/components/atoms/Script/GaScript'
 import '@/styles/global.scss'
 
 export const metadata: Metadata = {
@@ -14,7 +15,10 @@ export const metadata: Metadata = {
 export default function RootLayout(props: PropsWithChildren): React.ReactNode {
   return (
     <html lang="ja">
-      <body>{props.children}</body>
+      <body>
+        <GaScript />
+        {props.children}
+      </body>
     </html>
   )
 }
