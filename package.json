@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:standalone": "next build && cd .next/standalone/ && ln -s ../../public . && cd .next/ && ln -s ../../static .",
+    "zip:standalone": "cd .next/standalone/ && zip -rq ../../tao-site.zip .",
     "start": "next start",
+    "start:standalone": "node .next/standalone/server.js",
     "lint": "next lint --max-warnings=0",
     "stylelint": "stylelint '{**/*,*}.{css,scss}'",
     "stylelint:fix": "stylelint --fix '{**/*,*}.{css,scss}'",
