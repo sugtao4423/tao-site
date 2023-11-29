@@ -1,4 +1,5 @@
-import { ImageResponse, NextRequest, NextResponse } from 'next/server'
+import { ImageResponse } from 'next/og'
+import { NextRequest, NextResponse } from 'next/server'
 import { createElement } from 'react'
 
 import { ZabbixGraphServer } from '@/services/ServerStatus/ZabbixGraphServer'

@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import { Metadata, Viewport } from 'next'
 
 import { PropsWithChildren } from '@/@types/react'
 import { GaScript } from '@/components/atoms/Script/GaScript'
@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     template: '%s | taoのサイト',
     default: 'taoのサイト',
   },
+}
+
+export const viewport: Viewport = {
   themeColor: '#55acee',
 }
 
