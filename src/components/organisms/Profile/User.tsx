@@ -13,15 +13,15 @@ import styles from './user.module.scss'
 
 const LinkItems = [
   {
-    icon: <AmebaIcon />,
+    icon: <AmebaIcon aria-label="Amebaブログ" role="img" />,
     href: Links.ameba,
   },
   {
-    icon: <BlogIcon />,
+    icon: <BlogIcon aria-label="ブログ" role="img" />,
     href: Links.blog,
   },
   {
-    icon: <GithubIcon />,
+    icon: <GithubIcon aria-label="GitHub" role="img" />,
     href: Links.github,
   },
 ]
