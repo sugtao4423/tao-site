@@ -15,6 +15,10 @@ const specs: TableData<2> = [
 export const Mac3rdSpec: React.FC = () => (
   <Accordion title="Mac（第3世代サブ機）">
     <p>
+      <strong>2023/12より父親用として稼働しています</strong>
+    </p>
+
+    <p>
       <a
         href="https://support.apple.com/kb/SP776"
         rel="noopener noreferrer"
@@ -36,7 +40,7 @@ export const Mac3rdSpec: React.FC = () => (
       >
         MacBook Pro (Retina, 15-inch, Late 2013)
       </a>
-      を使っていましたが、そちらは父親用になりました
+      を使っていました
     </p>
   </Accordion>
 )
