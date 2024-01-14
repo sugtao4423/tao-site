@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 import classNames from 'classnames'
-import { parseAsString, useQueryStates } from 'next-usequerystate'
+import { parseAsString, useQueryStates } from 'nuqs'
 
 import { PropsWithClassName } from '@/@types/react'
 import { ZabbixHost } from '@/common/interfaces/api/zabbix'
