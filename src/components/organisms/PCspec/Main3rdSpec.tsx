@@ -12,7 +12,7 @@ const specs: TableData<2> = [
   ['HDD/SSD', 'C: Samsung SSD 980 PRO with Heatsink 1TB (M.2 Type2280)'],
   [null, 'D: Samsung SSD 870 EVO 4TB (SATA)'],
   [null, 'E: Samsung SSD 960 EVO 250GB (M.2 Type2280)'],
-  [null, 'F: Samsung SSD 860 EVO 1TB (SATA)'],
+  [null, 'F: Samsung SSD 990 PRO 2TB (M.2 Type2280)'],
   ['GPU', 'GeForce RTX 4070 Ti SUPER'],
   ['電源', 'KRPW-GK750W/90+'],
   ['OS', 'Win11 Pro 64bit'],
@@ -40,6 +40,9 @@ export const Main3rdSpec: React.FC = () => (
       <li>
         2024/01/30に発売されたばかりのRTX4070 Ti
         SUPERが気になってしまい購入。RTX2080から換装
+      </li>
+      <li>
+        同年03/12にFドライブのSamsung SSD 860 EVO 1TB (SATA)をM.2の2TBに換装
       </li>
     </ul>
   </Accordion>
