@@ -28,7 +28,7 @@ export class InmServer {
   }
 
   private static getHomobiAudioFilePath(f: Dirent): string {
-    const base = f.path.replace(/^(?:\.\/)?public/, '')
+    const base = f.parentPath.replace(/^(?:\.\/)?public/, '')
     return encodeURI(`${base}/${f.name}`)
   }
 
