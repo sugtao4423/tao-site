@@ -16,7 +16,7 @@ const specs: TableData<2> = [
   ['GPU', 'GeForce RTX 4070 Ti SUPER'],
   ['電源', 'KRPW-GK750W/90+'],
   ['OS', 'Win11 Pro 64bit'],
-  ['ケース', 'Define R5'],
+  ['ケース', 'Define 7'],
   ['キーボード', 'HHKB Professional2 (無刻印)'],
   ['マウス', 'Logicool MXTB1s'],
 ]
@@ -44,6 +44,7 @@ export const Main3rdSpec: React.FC = () => (
       <li>
         同年03/12にFドライブのSamsung SSD 860 EVO 1TB (SATA)をM.2の2TBに換装
       </li>
+      <li>同年07/15にケースをDefineR5からDefine7に換装</li>
     </ul>
   </Accordion>
 )
