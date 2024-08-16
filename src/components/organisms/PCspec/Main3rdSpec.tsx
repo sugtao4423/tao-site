@@ -7,7 +7,7 @@ import styles from './spec.module.scss'
 const specs: TableData<2> = [
   ['CPU', 'Core i7 13700K'],
   ['CPUクーラー', 'DeepCool LT720'],
-  ['M/B', 'PRIME H670-PLUS D4'],
+  ['M/B', 'TUF GAMING Z790-PLUS WIFI D4'],
   ['メモリ', 'DDR4 64GB (16GBx4)'],
   ['HDD/SSD', 'C: Samsung SSD 980 PRO with Heatsink 1TB (M.2 Type2280)'],
   [null, 'D: Samsung SSD 870 EVO 4TB (SATA)'],
@@ -45,6 +45,14 @@ export const Main3rdSpec: React.FC = () => (
         同年03/12にFドライブのSamsung SSD 860 EVO 1TB (SATA)をM.2の2TBに換装
       </li>
       <li>同年07/15にケースをDefineR5からDefine7に換装</li>
+      <li>
+        同年08/16にM/Bを<code>H670-PLUS D4</code>から
+        <code>Z790-PLUS WIFI D4</code>に換装
+        <br />
+        VRMフェーズが8から16+1に増え、さらにヒートシンクも付いた
+        <br />
+        そのためCPUへの電力供給が安定し持続的にフルロードできるようになった
+      </li>
     </ul>
   </Accordion>
 )
