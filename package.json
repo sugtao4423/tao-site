@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:standalone": "next build && cd .next/standalone/ && ln -s ../../public . && cd .next/ && ln -s ../../static .",
+    "dev": "rm -rf .next && next dev",
+    "build": "rm -rf .next && next build",
+    "build:standalone": "rm -rf .next && next build && cd .next/standalone/ && ln -s ../../public . && cd .next/ && ln -s ../../static .",
     "zip:standalone": "cd .next/standalone/ && zip -rq ../../tao-site.zip .",
     "start": "next start",
     "start:standalone": "node .next/standalone/server.js",
