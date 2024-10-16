@@ -9,7 +9,7 @@ import {
 
 const { ZABBIX_URL, ZABBIX_USER, ZABBIX_PASS } = process.env
 
-export class ZabbixHostServer {
+export class ZabbixHostRepository {
   /**
    * POST request to Zabbix server
    * @param method Zabbix API method

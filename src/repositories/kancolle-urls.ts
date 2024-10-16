@@ -12,7 +12,7 @@ import {
   KancolleShipData,
 } from '@/common/interfaces/kancolle-urls'
 
-export class KancolleUrlsServer {
+export class KancolleUrlsRepository {
   private readonly assetsDirPath = './src/assets'
 
   private readonly kancolleGetDataPrefix = 'kancolle_getData_'
@@ -78,7 +78,7 @@ export class KancolleUrlsServer {
         name: ship.api_name,
         yomi: ship.api_yomi,
         code: this.getShipCode(ship.api_id),
-        introduction: KancolleUrlsServer.getShipIntroduction(ship),
+        introduction: KancolleUrlsRepository.getShipIntroduction(ship),
       })
     )
   }

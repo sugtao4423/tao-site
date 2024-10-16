@@ -4,7 +4,7 @@ import { KancolleBgmUrls } from '@/components/organisms/Products/KancolleUrls/Ka
 import { KancolleCharUrls } from '@/components/organisms/Products/KancolleUrls/KancolleCharUrls'
 import { KancolleHistory } from '@/components/organisms/Products/KancolleUrls/KancolleHistory'
 import { CommonLayout } from '@/layouts/CommonLayout'
-import { KancolleUrlsServer } from '@/services/products/kancolle-urls-server'
+import { KancolleUrlsRepository } from '@/repositories/kancolle-urls'
 
 import styles from './page.module.scss'
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 export default function Page(): React.ReactNode {
-  const server = new KancolleUrlsServer()
+  const server = new KancolleUrlsRepository()
   const ships = server.getShipData()
   const portBgms = server.getPortBgmData()
   const battleBgms = server.getBattleBgmData()

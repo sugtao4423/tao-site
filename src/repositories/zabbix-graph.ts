@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const { ZABBIX_URL, ZABBIX_USER, ZABBIX_PASS } = process.env
 
-export class ZabbixGraphServer {
+export class ZabbixGraphRepository {
   /**
    * Login to Zabbix web
    * @returns Session id

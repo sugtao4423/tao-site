@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { NextRequest, NextResponse } from 'next/server'
 import { createElement } from 'react'
 
-import { ZabbixGraphServer } from '@/services/ServerStatus/ZabbixGraphServer'
+import { ZabbixGraphRepository } from '@/repositories/zabbix-graph'
 
 const ErrorImage = (code: number, message: string): ImageResponse => {
   const element = createElement(
@@ -38,7 +38,7 @@ export const GET = async (request: NextRequest): Promise<Response> => {
   }
 
   try {
-    const imageBuffer = await ZabbixGraphServer.getGraphImage(
+    const imageBuffer = await ZabbixGraphRepository.getGraphImage(
       graphType,
       graphId
     )
