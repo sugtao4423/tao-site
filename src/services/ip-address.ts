@@ -22,7 +22,7 @@ const searchHeaderKeys = [
   'Cf-Pseudo-IPv4',
 ]
 
-export class IpAddress {
+export class IpAddressService {
   public static getClientIp(request: Request): string | null {
     const validIpKeys = searchHeaderKeys.filter((key) => {
       const v = request.headers.get(key)
