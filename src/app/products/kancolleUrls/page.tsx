@@ -4,7 +4,7 @@ import { KancolleBgmUrls } from '@/components/organisms/Products/KancolleUrls/Ka
 import { KancolleCharUrls } from '@/components/organisms/Products/KancolleUrls/KancolleCharUrls'
 import { KancolleHistory } from '@/components/organisms/Products/KancolleUrls/KancolleHistory'
 import { CommonLayout } from '@/layouts/CommonLayout'
-import { KancolleUrlsServer } from '@/services/products/kancolleUrls/server'
+import { KancolleUrlsServer } from '@/services/products/kancolle-urls-server'
 
 import styles from './page.module.scss'
 

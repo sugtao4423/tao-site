@@ -7,7 +7,7 @@ import {
 } from '@/common/interfaces/kancolle-urls'
 import { H2 } from '@/components/atoms/Heading/H2'
 import { Accordion } from '@/components/molecules/Accordion/Accordion'
-import { KancolleUrlsService } from '@/services/products/kancolleUrls/main'
+import { KancolleUrlsService } from '@/services/products/kancolle-urls'
 
 import styles from './kancolleUrls.module.scss'
 

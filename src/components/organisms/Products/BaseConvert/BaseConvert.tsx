@@ -6,7 +6,7 @@ import classNames from 'classnames'
 
 import { PropsWithClassName } from '@/@types/react'
 import { LabelInput } from '@/components/atoms/Input/LabelInput'
-import { BaseConvertService } from '@/services/products/baseConvert'
+import { BaseConvertService } from '@/services/products/base-convert'
 
 import styles from './baseConvert.module.scss'
 

@@ -7,11 +7,11 @@ import classNames from 'classnames'
 import { KancolleShipData } from '@/common/interfaces/kancolle-urls'
 import { H2 } from '@/components/atoms/Heading/H2'
 import { LabelInput } from '@/components/atoms/Input/LabelInput'
+import { KancolleUrlsService } from '@/services/products/kancolle-urls'
 import {
   pictureItems,
   voiceItems,
-} from '@/services/products/kancolleUrls/const'
-import { KancolleUrlsService } from '@/services/products/kancolleUrls/main'
+} from '@/services/products/kancolle-urls-const'
 
 import styles from './kancolleUrls.module.scss'
 

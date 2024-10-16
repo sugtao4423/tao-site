@@ -1,6 +1,5 @@
 import { KancolleBattleBgmData } from '@/common/interfaces/kancolle-urls'
-
-import { keys, serverIps } from './const'
+import { keys, serverIps } from '@/services/products/kancolle-urls-const'
 
 export class KancolleUrlsService {
   private static get serverOrigin(): string {

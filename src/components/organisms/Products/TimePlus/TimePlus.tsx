@@ -6,7 +6,7 @@ import classNames from 'classnames'
 
 import { PropsWithClassName } from '@/@types/react'
 import { H3 } from '@/components/atoms/Heading/H3'
-import { TimePlusService } from '@/services/products/timePlus'
+import { TimePlusService } from '@/services/products/time-plus'
 
 import styles from './timePlus.module.scss'
 
