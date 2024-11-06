@@ -1,5 +1,7 @@
 import { Metadata, Viewport } from 'next'
 
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
+
 import { PropsWithChildren } from '@/@types/react'
 import { GaScript } from '@/components/atoms/Script/GaScript'
 import '@/styles/global.scss'
@@ -20,7 +22,7 @@ export default function RootLayout(props: PropsWithChildren): React.ReactNode {
     <html lang="ja">
       <body>
         <GaScript />
-        {props.children}
+        <NuqsAdapter>{props.children}</NuqsAdapter>
       </body>
     </html>
   )

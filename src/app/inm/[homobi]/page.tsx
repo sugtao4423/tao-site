@@ -9,13 +9,12 @@ export const metadata: Metadata = {
 }
 
 type Props = {
-  params: {
-    homobi: string
-  }
+  params: Promise<{ homobi: string }>
 }
 
-export default function Page(props: Props): React.ReactNode {
-  const server = new InmServer(props.params.homobi)
+export default async function Page(props: Props): Promise<React.ReactNode> {
+  const params = await props.params
+  const server = new InmServer(params.homobi)
 
   return (
     <CommonLayout title={server.homobiName}>

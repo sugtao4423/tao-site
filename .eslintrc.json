@@ -147,6 +147,7 @@
     },
     {
       "files": [
+        "next.config.ts",
         "**/{app,pages}/**/{index,head,template,layout,page,\\[*\\],loading,error,not-found}.{js,jsx,ts,tsx}"
       ],
       "rules": {
