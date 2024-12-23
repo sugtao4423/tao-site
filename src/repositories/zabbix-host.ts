@@ -1,5 +1,5 @@
 import 'server-only'
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 
 import { ZabbixGraph, ZabbixHost } from '@/common/interfaces/api/zabbix'
 import {
@@ -25,12 +25,16 @@ export class ZabbixHostRepository {
   ): Promise<T> {
     const id = Math.floor(Math.random() * 114514) + 1
     const url = `${ZABBIX_URL}/api_jsonrpc.php`
-    const headers = { 'Content-Type': 'application/json-rpc' }
+    const headers: AxiosRequestConfig['headers'] = {
+      'Content-Type': 'application/json-rpc',
+    }
+    if (auth) {
+      headers.Authorization = `Bearer ${auth}`
+    }
     const body = {
       jsonrpc: '2.0',
       method,
       params,
-      auth,
       id,
     }
 
