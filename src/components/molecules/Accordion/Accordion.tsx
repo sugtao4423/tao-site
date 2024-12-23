@@ -19,7 +19,6 @@ export const Accordion: React.FC<Props> = (props) => {
       className={classNames(props.className, styles.details)}
       ref={accordion.details}
     >
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
       <summary
         className={styles.summary}
         ref={accordion.summary}

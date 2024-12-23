@@ -1,9 +1,9 @@
 import { RefObject, useRef } from 'react'
 
 interface Refs {
-  details: RefObject<HTMLDetailsElement>
-  summary: RefObject<HTMLElement>
-  content: RefObject<HTMLDivElement>
+  details: RefObject<HTMLDetailsElement | null>
+  summary: RefObject<HTMLElement | null>
+  content: RefObject<HTMLDivElement | null>
 }
 
 interface AccordionData extends Refs {
