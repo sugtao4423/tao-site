@@ -30,7 +30,7 @@ export const AutoReloadImage: React.FC<Props> = (props) => {
     const timer = setInterval(() => {
       setSrc(getTimestampUrl())
     }, props.interval * 1000)
-    return () => clearInterval(timer)
+    return (): void => clearInterval(timer)
   }, [getTimestampUrl, props.interval])
 
   if (!src) return null

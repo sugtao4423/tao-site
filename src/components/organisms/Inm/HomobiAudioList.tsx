@@ -48,7 +48,7 @@ export const HomobiAudioList: React.FC<Props> = (props) => {
     }
   }
 
-  useEffect(() => () => {
+  useEffect(() => (): void => {
     if (audioRef.current) {
       audioRef.current.pause()
       audioRef.current = null
