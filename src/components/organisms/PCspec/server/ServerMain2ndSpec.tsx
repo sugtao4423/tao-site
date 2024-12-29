@@ -8,7 +8,7 @@ const specs: TableData<2> = [
   ['商品名', 'Express5800/R120e-1E'],
   ['型名', 'N8100-2124Y'],
   ['CPU', 'Xeon E5-2420v2 2.20GHz x2'],
-  ['メモリ', '120GB (16GBx4, 8GBx6, 4GBx2)'],
+  ['メモリ', 'DDR3 ECC 120GB (16GBx4, 8GBx6, 4GBx2)'],
   ['SSD', 'Samsung 860 EVO 1TB (SATA) x2 (RAID1)'],
 ]
 
