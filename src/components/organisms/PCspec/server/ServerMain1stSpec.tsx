@@ -13,7 +13,7 @@ const specs: TableData<2> = [
 ]
 
 export const ServerMain1stSpec: React.FC = () => (
-  <Accordion title="メインサーバー（ラックサーバー）">
+  <Accordion title="メインサーバー（第1世代ラックサーバー）">
     <p>
       <strong>現在はメモリを流用して新しい鯖になっています</strong>
     </p>
