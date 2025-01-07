@@ -40,8 +40,8 @@ export default function Page(): React.ReactNode {
         <H2 className={styles.mt}>引退済み</H2>
         <ServerMain2ndSpec />
         <ServerMain1stSpec />
-        <Main1stSpec />
         <Main2ndSpec />
+        <Main1stSpec />
         <Mac3rdSpec />
         <Mac2ndSpec />
       </div>
