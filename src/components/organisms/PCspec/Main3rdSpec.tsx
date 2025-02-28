@@ -14,7 +14,7 @@ const specs: TableData<2> = [
   [null, 'E: Samsung SSD 960 EVO 250GB (M.2 Type2280)'],
   [null, 'F: Samsung SSD 990 PRO 2TB (M.2 Type2280)'],
   ['GPU', 'GeForce RTX 4070 Ti SUPER'],
-  ['電源', 'KRPW-GK750W/90+'],
+  ['電源', 'FSP HG2-1000.GEN5'],
   ['OS', 'Win11 Pro 64bit'],
   ['ケース', 'Define 7'],
   ['キーボード', 'HHKB Professional2 (無刻印)'],
@@ -52,6 +52,12 @@ export const Main3rdSpec: React.FC = () => (
         VRMフェーズが8から16+1に増え、さらにヒートシンクも付いた
         <br />
         そのためCPUへの電力供給が安定し持続的にフルロードできるようになった
+      </li>
+      <li>
+        2025/02/28に電源を<code>KRPW-GK750W/90+</code>から
+        <code>HG2-1000.GEN5</code>に換装
+        <br />
+        1000Wで余裕が生まれ、また12VHPWRを変換せずそのまま使えるようになった
       </li>
     </ul>
   </Accordion>
