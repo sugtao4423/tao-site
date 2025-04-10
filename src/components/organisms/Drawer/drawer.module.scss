@@ -45,8 +45,8 @@
   padding: 1rem;
   overflow-y: auto;
   background-color: variables.$color-indigo-400;
-  transition: transform 0.5s ease;
   transform: translateX(20rem);
+  transition: transform 0.5s ease;
 
   &.open {
     transform: translateX(0);
