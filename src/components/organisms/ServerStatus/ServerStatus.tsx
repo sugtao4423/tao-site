@@ -68,7 +68,9 @@ export const ServerStatus: React.FC<Props> = (props) => {
         <select
           className="form-select"
           value={graphId ?? ''}
-          onChange={onChangeGraph}
+          onChange={(e) => {
+            onChangeGraph(e)
+          }}
         >
           <option value="">-</option>
           {thisHost?.graphs.map((graph) => (
