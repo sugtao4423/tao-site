@@ -27,6 +27,7 @@
     "sharp": "^0.34.1"
   },
   "devDependencies": {
+    "@stylistic/eslint-plugin-ts": "^4.2.0",
     "@types/node": "^20.17.30",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.2",
