@@ -46,7 +46,7 @@ export const KancolleBgmUrls: React.FC<Props> = (props) => (
             key={bgm.id}
             className={classNames('col-6 col-md-4 col-xl-3', styles.item)}
           >
-            <Accordion title={`${bgm.map_no.join('-')}`}>
+            <Accordion title={bgm.map_no.join('-')}>
               <div className="row">
                 {KancolleUrlsService.battleBgmItems(bgm).map((item) => (
                   <div key={item.name} className="col-12 col-lg-6">
