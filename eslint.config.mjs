@@ -2,6 +2,7 @@
 
 import eslint from '@eslint/js'
 import pluginNext from '@next/eslint-plugin-next'
+import pluginStylisticTs from '@stylistic/eslint-plugin-ts'
 import configPrettier from 'eslint-config-prettier'
 import pluginImport from 'eslint-plugin-import'
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
@@ -9,7 +10,6 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginUnusedImports from 'eslint-plugin-unused-imports'
 import tseslint from 'typescript-eslint'
-import pluginStylisticTs from '@stylistic/eslint-plugin-ts'
 
 export default tseslint.config(
   { name: 'react/recommended', ...pluginReact.configs.flat.recommended },
