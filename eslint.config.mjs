@@ -9,6 +9,7 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginUnusedImports from 'eslint-plugin-unused-imports'
 import tseslint from 'typescript-eslint'
+import pluginStylisticTs from '@stylistic/eslint-plugin-ts'
 
 export default tseslint.config(
   { name: 'react/recommended', ...pluginReact.configs.flat.recommended },
@@ -40,8 +41,6 @@ export default tseslint.config(
     rules: {
       'capitalized-comments': ['error', 'always'],
       curly: ['error', 'multi-line', 'consistent'],
-      // Deprecated
-      quotes: ['error', 'single', { avoidEscape: true }],
       'no-param-reassign': 'error',
       'no-restricted-imports': [
         'error',
@@ -64,6 +63,20 @@ export default tseslint.config(
     },
   },
   {
+    name: 'sugtao4423/@stylistic',
+    plugins: { '@stylistic/ts': pluginStylisticTs },
+    rules: {
+      '@stylistic/ts/quotes': ['error', 'single', { avoidEscape: true }],
+      '@stylistic/ts/lines-around-comment': [
+        'error',
+        {
+          beforeBlockComment: true,
+          allowBlockStart: true,
+        },
+      ],
+    },
+  },
+  {
     name: 'sugtao4423/@typescript-eslint',
     rules: {
       '@typescript-eslint/explicit-function-return-type': [
@@ -78,15 +91,6 @@ export default tseslint.config(
         'error',
         { ignoreArrowShorthand: true },
       ],
-      // Removed
-      // '@typescript-eslint/lines-around-comment': [
-      //   'error',
-      //   {
-      //     // Invalid
-      //     beforeBlockComment: true,
-      //     allowBlockStart: true,
-      //   },
-      // ],
     },
   },
   {
