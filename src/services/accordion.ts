@@ -7,7 +7,7 @@ interface Refs {
 }
 
 interface AccordionData extends Refs {
-  onToggle(e: React.MouseEvent<HTMLElement, MouseEvent>): void
+  onToggle(e: React.MouseEvent<HTMLElement>): void
 }
 
 class Accordion {
@@ -79,10 +79,7 @@ class Accordion {
     }
   }
 
-  public onToggle(
-    e: React.MouseEvent<HTMLElement, MouseEvent>,
-    refs: Refs
-  ): void {
+  public onToggle(e: React.MouseEvent<HTMLElement>, refs: Refs): void {
     e.preventDefault()
     refs.details.current!.style.overflow = 'hidden'
     if (this.isClosing || !refs.details.current!.open) {
@@ -100,7 +97,7 @@ export const useAccordion = (): AccordionData => {
   const content = useRef<HTMLDivElement>(null)
 
   const accordion = new Accordion()
-  const onToggle = (e: React.MouseEvent<HTMLElement, MouseEvent>): void =>
+  const onToggle = (e: React.MouseEvent<HTMLElement>): void =>
     accordion.onToggle(e, { details, summary, content })
 
   return { details, summary, content, onToggle }

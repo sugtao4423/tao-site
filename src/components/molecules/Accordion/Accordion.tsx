@@ -22,7 +22,7 @@ export const Accordion: React.FC<Props> = (props) => {
       <summary
         className={styles.summary}
         ref={accordion.summary}
-        onClick={accordion.onToggle}
+        onClick={(e) => accordion.onToggle(e)}
       >
         <SquareArrowIcon className={styles.arrow} />
         <div className={styles.title}>{props.title}</div>

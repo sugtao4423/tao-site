@@ -55,11 +55,13 @@ export const HomobiAudioList: React.FC<Props> = (props) => {
     }
   })
 
+  /* eslint-disable react/jsx-key */
   const tableData: TableData<3> = props.files.map((file) => [
     file.name,
     <Play onClick={(): void => clickAudio(file.path)} />,
     <Download download={file.filename} href={file.path} />,
   ])
+  /* eslint-enable react/jsx-key */
 
   return <Table noVerticalDivider data={tableData} />
 }

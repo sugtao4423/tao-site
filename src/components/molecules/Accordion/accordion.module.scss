@@ -29,8 +29,8 @@ $border-radius: 8px;
 
   & > .arrow {
     width: 1.5em;
-    transition: transform 0.2s ease-in-out;
     transform: rotate(-90deg);
+    transition: transform 0.2s ease-in-out;
   }
 
   & > .title {

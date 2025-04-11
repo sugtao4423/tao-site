@@ -23,7 +23,7 @@ export class ZabbixGraphRepository {
       maxRedirects: 0,
       validateStatus: (status) => status >= 200 && status <= 302,
     })
-    const cookies = res.headers['set-cookie'] as string[] | undefined
+    const cookies = res.headers['set-cookie']
     if (!cookies) {
       throw new Error('No cookies')
     }

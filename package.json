@@ -12,36 +12,36 @@
     "lint": "next lint --max-warnings=0",
     "stylelint": "stylelint '{**/*,*}.{css,scss}'",
     "stylelint:fix": "stylelint --fix '{**/*,*}.{css,scss}'",
-    "prettier": "prettier --check '{**/*,*}.{js,jsx,ts,tsx,css,scss,json}'",
-    "prettier:fix": "prettier --write '{**/*,*}.{js,jsx,ts,tsx,css,scss,json}'"
+    "prettier": "prettier --check '{**/*,*}.{js,jsx,mjs,ts,tsx,css,scss,json}'",
+    "prettier:fix": "prettier --write '{**/*,*}.{js,jsx,mjs,ts,tsx,css,scss,json}'"
   },
   "dependencies": {
-    "axios": "^1.7.9",
+    "axios": "^1.8.4",
     "bootstrap": "5.3.2",
     "classnames": "^2.5.1",
-    "next": "15.2.4",
-    "nuqs": "^2.2.3",
+    "next": "15.3.0",
+    "nuqs": "^2.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "server-only": "^0.0.1",
-    "sharp": "^0.33.5"
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
-    "@types/node": "^20.17.10",
+    "@stylistic/eslint-plugin-ts": "^4.2.0",
+    "@types/node": "^20.17.30",
     "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "15.2.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "^3.7.0",
-    "eslint-plugin-unused-imports": "^3.2.0",
-    "prettier": "^3.4.2",
-    "sass": "^1.83.0",
-    "stylelint": "^16.12.0",
+    "@types/react-dom": "^19.1.2",
+    "eslint": "^9.24.0",
+    "eslint-config-next": "15.3.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.3",
+    "stylelint": "^16.18.0",
     "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-recess-order": "^5.1.1",
+    "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1"
   }
 }
