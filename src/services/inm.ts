@@ -28,8 +28,11 @@ export class InmServer {
   }
 
   private static getHomobiAudioFilePath(f: Dirent): string {
-    const base = f.parentPath.replace(/^(?:\.\/)?public/, '')
-    return encodeURI(`${base}/${f.name}`)
+    return `${f.parentPath}/${f.name}`
+      .replace(/^(?:\.\/)?public/, '')
+      .split('/')
+      .map((s) => encodeURIComponent(s))
+      .join('/')
   }
 
   public getHomobiAudioFiles(): InmAudioFile[] {
