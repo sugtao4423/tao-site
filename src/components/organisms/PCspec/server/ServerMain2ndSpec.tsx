@@ -14,7 +14,11 @@ const specs: TableData<2> = [
 
 export const ServerMain2ndSpec: React.FC = () => (
   <Accordion title="メインサーバー（第2世代ラックサーバー）">
-    <p>鯖室のラックにマウントして運用しています</p>
+    <p>
+      <strong>現在はSSDを流用して新しい鯖になっています</strong>
+    </p>
+
+    <p>2024/12/29に引退しました</p>
 
     <Table className={styles.table} data={specs} />
 
