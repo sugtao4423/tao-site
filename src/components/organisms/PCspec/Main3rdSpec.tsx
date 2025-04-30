@@ -15,7 +15,7 @@ const specs: TableData<2> = [
   [null, 'F: Samsung SSD 990 PRO 2TB (M.2 Type2280)'],
   ['GPU', 'GeForce RTX 4070 Ti SUPER'],
   ['電源', 'FSP HG2-1000.GEN5'],
-  ['OS', 'Win11 Pro 64bit'],
+  ['OS', 'Windows 11 Pro 64bit'],
   ['ケース', 'Define 7'],
   ['キーボード', 'HHKB Professional2 (無刻印)'],
   ['マウス', 'Logicool MXTB1s'],

@@ -14,7 +14,7 @@ const specs: TableData<2> = [
   [null, 'F: Samsung SSD 1TB 860 EVO (SATA)'],
   ['GPU', 'GeForce RTX 2080'],
   ['電源', '玄人志向 KRPW-GK750W/90+'],
-  ['OS', 'Win10 Pro 64bit'],
+  ['OS', 'Windows 10 Pro 64bit'],
   ['ケース', 'Define R5'],
   ['キーボード', 'HHKB Professional2 (無刻印)'],
   ['マウス', 'Logicool MXTB1s'],

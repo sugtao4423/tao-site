@@ -11,7 +11,7 @@ const specs: TableData<2> = [
   ['HDD', '日立 2TB HDS723020BLA642 (SATA)'],
   ['GPU', 'GeForce GTX 1080'],
   ['電源', '玄人志向 KRPW-P630W/85+'],
-  ['OS', 'Win7 Pro 64bit'],
+  ['OS', 'Windows 7 Pro 64bit'],
   ['ケース', 'Define R5'],
   ['キーボード', 'HHKB Professional2 (無刻印)'],
   ['マウス', 'Logicool MXTB1s'],
