@@ -14,6 +14,25 @@ const specs: TableData<2> = [
   [null, 'Samsung 870 EVO 1TB (SATA) x1'],
 ]
 
+const replaceLog: TableData<5> = [
+  ['日付', '種別', '換装前', '換装後', '備考'],
+  [
+    '購入時',
+    'メモリ',
+    'DDR4 ECC 128GB (32GBx4)',
+    'DDR4 ECC 256GB (32GBx8)',
+    '12レーンも余っていたため買い足し',
+  ],
+  ['購入時', 'SSD', null, 'Samsung 860 EVO 1TB (SATA) x2', '旧鯖から流用'],
+  [
+    '購入時',
+    'SSD',
+    null,
+    'Samsung 870 EVO 1TB (SATA) x1',
+    'マウンタとともに新規追加',
+  ],
+]
+
 export const ServerMain3rdSpec: React.FC = () => (
   <Accordion title="メインサーバー（第3世代ラックサーバー）">
     <p>鯖室のラックにマウントして運用しています</p>
@@ -23,16 +42,14 @@ export const ServerMain3rdSpec: React.FC = () => (
     <p>2024/12/15にヤフオクで33,550円で落札し、12/17に着弾しました</p>
 
     <p>
-      メモリは元々32GBx4が載っていましたが、12レーンも余っていたため買い足しました
-      <br />
-      ストレージは旧鯖のSSD2台を流用し、新たにSSDとマウンタを1台ずつ買い足しました
-    </p>
-
-    <p>
       ESXiの無償版の提供が終了したためProxmox
       VEをインストールし、VMも再構築しました
     </p>
 
     <p>2024/12/29より運用開始</p>
+
+    <Accordion title="換装履歴">
+      <Table enableHeader data={replaceLog} />
+    </Accordion>
   </Accordion>
 )
