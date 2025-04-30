@@ -7,23 +7,36 @@ import styles from '../spec.module.scss'
 const specs: TableData<2> = [
   ['CPU', 'AMD Turion II Neo N54L Dual-Core'],
   ['メモリ', 'DDR3 1333MHz 16GB (8GBx2)'],
-  ['HDD', 'WD Black 500GB SATA'],
-  [null, 'WD Red Plus 10TB SATA (2020年9月)'],
-  [null, 'WD Ultrastar HC570 22TB SATA (2024年11月)'],
+  ['HDD', 'WD Black 500GB (SATA)'],
+  [null, 'WD Red Plus 10TB (SATA)'],
+  [null, 'WD Ultrastar HC570 22TB (SATA)'],
   ['OS', 'Debian 12'],
+]
+
+const replaceLog: TableData<5> = [
+  ['日付', '種別', '換装前', '換装後', '備考'],
+  ['2015/09', 'HDD', null, 'WD Green 3TB (SATA)', '新規追加'],
+  ['2017/11', 'HDD', null, 'WD Blue 4TB (SATA)', '新規追加'],
+  [
+    '2018/01/20',
+    'メモリ',
+    'DDR3 1333MHz 4GB (4GBx1)',
+    'DDR3 1333MHz 16GB (8GBx2)',
+    'メイン機の組み替えで余ったメモリを流用',
+  ],
+  ['2020/09/25', 'HDD', null, 'WD Red Plus 10TB (SATA)', '新規追加'],
+  [
+    '2024/11/12',
+    'HDD',
+    'WD Green 3TB, WD Blue 4TB',
+    'WD Ultrastar HC570 22TB (SATA)',
+    null,
+  ],
 ]
 
 export const ServerStorage1stSpec: React.FC = () => (
   <Accordion title="ストレージサーバー（マイクロサーバー）">
-    <p>
-      <a
-        href="http://h50146.www5.hp.com/products/servers/proliant/micro/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        HP ProLiant MicroServer Turion II NEO N5
-      </a>
-    </p>
+    <p>HP ProLiant MicroServer Turion II NEO N5</p>
 
     <Table className={styles.table} data={specs} />
 
@@ -38,13 +51,10 @@ export const ServerStorage1stSpec: React.FC = () => (
       Storage」という表記があり、企業用のHDDの模様
     </p>
 
-    <ul>
-      <li>
-        2018/01/20にメイン機の組み替えをしたことでDDR3のメモリが余り、4GBから8GBx2に換装
-      </li>
-      <li>2024/11/12に22TBのHDDを購入し、3+4+10TBから10+22TBの構成に</li>
-    </ul>
-
     <p>鯖室で稼働しています</p>
+
+    <Accordion title="換装履歴">
+      <Table enableHeader data={replaceLog} />
+    </Accordion>
   </Accordion>
 )
