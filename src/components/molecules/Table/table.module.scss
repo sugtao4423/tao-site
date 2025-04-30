@@ -11,18 +11,27 @@ $border: 1px solid variables.$color-gray-300;
   width: 100%;
   border-collapse: collapse;
 
+  %cell {
+    padding: 0.75rem;
+    border: $border;
+  }
+
   & > tbody > tr {
     &:nth-child(2n + 1) {
       background-color: rgb(0 0 0 / 3.75%);
     }
 
     & > td {
-      padding: 0.75rem;
-      border: $border;
+      @extend %cell;
     }
   }
 
-  &.noVerticalDivider > tbody > tr > td {
+  & > thead > tr > th {
+    @extend %cell;
+  }
+
+  &.noVerticalDivider > tbody > tr > td,
+  &.noVerticalDivider > thead > tr > th {
     border-right: none;
     border-left: none;
 
