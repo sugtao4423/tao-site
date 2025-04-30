@@ -15,8 +15,8 @@ const specs: TableData<2> = [
 
 const replaceLog: TableData<5> = [
   ['日付', '種別', '換装前', '換装後', '備考'],
-  ['2015/09', 'HDD', null, 'WD Green 3TB WD30EZRX (SATA)', '新規追加'],
-  ['2017/11', 'HDD', null, 'WD Blue 4TB WD40EZRZ (SATA)', '新規追加'],
+  ['2015/09/11', 'HDD', null, 'WD Green 3TB WD30EZRX (SATA)', '新規追加'],
+  ['2017/11/22', 'HDD', null, 'WD Blue 4TB WD40EZRZ (SATA)', '新規追加'],
   [
     '2018/01/20',
     'メモリ',
