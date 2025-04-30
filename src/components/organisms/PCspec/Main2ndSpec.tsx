@@ -42,10 +42,10 @@ const replaceLog: TableData<5> = [
   ],
   [
     '2019/11/04',
-    'HDD',
+    'Dドライブ',
     '日立 2TB HDS723020BLA642 (SATA)',
     'WD Red 3TB WD30EFRX (SATA)',
-    'Dドライブが不調になった',
+    '不調になった',
   ],
   [
     '2021/01/19',
