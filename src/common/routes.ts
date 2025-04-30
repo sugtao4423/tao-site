@@ -9,7 +9,6 @@ export enum Routes {
   inm = '/inm',
   serverStatus = '/ServerStatus',
 
-  apiHomeNetworkDiagram = '/api/HomeNetworkDiagramUrl',
   apiServerChart = '/api/ServerChart',
 }
 

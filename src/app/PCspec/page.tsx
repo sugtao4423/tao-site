@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 
 import { H2 } from '@/components/atoms/Heading/H2'
-import { HomeNetworkDiagram } from '@/components/organisms/PCspec/HomeNetworkDiagram'
 import { Mac2ndSpec } from '@/components/organisms/PCspec/Mac2ndSpec'
 import { Mac3rdSpec } from '@/components/organisms/PCspec/Mac3rdSpec'
 import { Mac4thSpec } from '@/components/organisms/PCspec/Mac4thSpec'
@@ -45,8 +44,6 @@ export default function Page(): React.ReactNode {
         <Mac3rdSpec />
         <Mac2ndSpec />
       </div>
-
-      <HomeNetworkDiagram className={styles.mt} />
     </CommonLayout>
   )
 }
