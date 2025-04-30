@@ -6,18 +6,55 @@ import styles from './spec.module.scss'
 
 const specs: TableData<2> = [
   ['CPU', 'Core i7 8700K'],
-  ['M/B', 'Z390 Pro4'],
+  ['M/B', 'ASRock Z390 Pro4'],
   ['メモリ', 'DDR4 64GB (16GBx4)'],
   ['HDD/SSD', 'C: Samsung SSD 250GB 960 EVO (M.2 Type2280)'],
   [null, 'D: WD Red 3TB WD30EFRX (SATA)'],
   [null, 'E: Samsung SSD 250GB 850 EVO (SATA)'],
   [null, 'F: Samsung SSD 1TB 860 EVO (SATA)'],
   ['GPU', 'GeForce RTX 2080'],
-  ['電源', 'KRPW-GK750W/90+'],
+  ['電源', '玄人志向 KRPW-GK750W/90+'],
   ['OS', 'Win10 Pro 64bit'],
   ['ケース', 'Define R5'],
   ['キーボード', 'HHKB Professional2 (無刻印)'],
   ['マウス', 'Logicool MXTB1s'],
+]
+
+const replaceLog: TableData<5> = [
+  ['日付', '種別', '換装前', '換装後', '備考'],
+  [
+    '2019/06/13',
+    '電源',
+    '玄人志向 KRPW-P630W/85+',
+    '玄人志向 KRPW-GK750W/90+',
+    <>
+      故障の前兆（フリーズ&amp;操作受け付けない）が発生
+      <br />
+      CPUとGPUを100%にしてテストしたところ見事フリーズした
+    </>,
+  ],
+  [
+    '2019/06/16',
+    'GPU',
+    'GeForce GTX 1080',
+    'GeForce RTX 2080',
+    'なんとなく購入',
+  ],
+  [
+    '2019/11/04',
+    'HDD',
+    '日立 2TB HDS723020BLA642 (SATA)',
+    'WD Red 3TB WD30EFRX (SATA)',
+    'Dドライブが不調になった',
+  ],
+  [
+    '2021/01/19',
+    'M/B',
+    'ASUS TUF Z370-PLUS GAMING',
+    'ASRock Z390 Pro4',
+    '突然クラッシュなどの不調に見舞われた',
+  ],
+  ['2022/03/13', 'メモリ', 'DDR4 32GB (8GBx4)', 'DDR4 64GB (16GBx4)', null],
 ]
 
 export const Main2ndSpec: React.FC = () => (
@@ -32,23 +69,8 @@ export const Main2ndSpec: React.FC = () => (
 
     <p>前のメイン機からケースを流用しました</p>
 
-    <ul>
-      <li>
-        2019/06/13に電源故障の前兆（フリーズ&amp;操作受け付けない）が発生
-        <br />
-        CPU、GPU共に100%にしてテストしたところ見事フリーズしたので電源を
-        <code>KRPW-P630W/85+</code>から換装
-      </li>
-      <li>同年06/16になんとなくRTX2080を購入。GTX1080から換装</li>
-      <li>
-        同年11/04に前のメイン機から使っていた<code>HDS723020BLA642</code>
-        が不調になったためWD製HDDへ換装
-      </li>
-      <li>
-        2021/01/19に突然クラッシュなどの不調に見舞われたM/B
-        <code>TUF Z370-Plus Gaming</code>から換装
-      </li>
-      <li>2022/03/13にメモリを8GBx4から16GBx4へ換装</li>
-    </ul>
+    <Accordion title="換装履歴">
+      <Table enableHeader data={replaceLog} />
+    </Accordion>
   </Accordion>
 )
