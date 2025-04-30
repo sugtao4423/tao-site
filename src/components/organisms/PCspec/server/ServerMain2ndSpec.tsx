@@ -12,9 +12,31 @@ const specs: TableData<2> = [
   ['SSD', 'Samsung 860 EVO 1TB (SATA) x2 (RAID1)'],
 ]
 
+const replaceLog: TableData<5> = [
+  ['日付', '種別', '換装前', '換装後', '備考'],
+  [
+    '購入時',
+    'メモリ',
+    'DDR3 ECC 8GB (4GBx2)',
+    'DDR3 ECC 120GB (16GBx4, 8GBx6, 4GBx2)',
+    'すべて旧鯖から流用',
+  ],
+  [
+    '購入時',
+    'SSD',
+    'HDD 300GB (SAS) x2',
+    'Samsung 860 EVO 1TB (SATA) x2',
+    '2.5インチしか搭載できないのでSSDを新調',
+  ],
+]
+
 export const ServerMain2ndSpec: React.FC = () => (
   <Accordion title="メインサーバー（第2世代ラックサーバー）">
-    <p>鯖室のラックにマウントして運用しています</p>
+    <p>
+      <strong>現在はSSDを流用して新しい鯖になっています</strong>
+    </p>
+
+    <p>2024/12/29に引退しました</p>
 
     <Table className={styles.table} data={specs} />
 
@@ -23,16 +45,14 @@ export const ServerMain2ndSpec: React.FC = () => (
     </p>
 
     <p>
-      メモリは元々4GB ECCx2が載っていましたが、すべて旧鯖から移行しました
-      <br />
-      ストレージも300GBのSASが2台載っていましたが、2.5インチしか搭載できないのでSSDを2台新調しました
-    </p>
-
-    <p>
       ESXi 7系がドライバの関係でインストール不可能だったので、ESXi
       6.7で稼働しています
     </p>
 
     <p>2020/12/14より運用開始</p>
+
+    <Accordion title="換装履歴">
+      <Table enableHeader data={replaceLog} />
+    </Accordion>
   </Accordion>
 )

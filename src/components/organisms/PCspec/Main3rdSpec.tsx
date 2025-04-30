@@ -15,10 +15,61 @@ const specs: TableData<2> = [
   [null, 'F: Samsung SSD 990 PRO 2TB (M.2 Type2280)'],
   ['GPU', 'GeForce RTX 4070 Ti SUPER'],
   ['電源', 'FSP HG2-1000.GEN5'],
-  ['OS', 'Win11 Pro 64bit'],
+  ['OS', 'Windows 11 Pro 64bit'],
   ['ケース', 'Define 7'],
   ['キーボード', 'HHKB Professional2 (無刻印)'],
   ['マウス', 'Logicool MXTB1s'],
+]
+
+const replaceLog: TableData<5> = [
+  ['日付', '種別', '換装前', '換装後', '備考'],
+  [
+    '2023/04/30',
+    'Eドライブ',
+    'Samsung SSD 850 EVO 250GB (SATA)',
+    'Samsung SSD 960 EVO 250GB (M.2 Type2280)',
+    null,
+  ],
+  [
+    '2023/05/28',
+    'Dドライブ',
+    'WD Red 3TB WD30EFRX (SATA)',
+    'Samsung SSD 870 EVO 4TB (SATA)',
+    null,
+  ],
+  [
+    '2024/01/30',
+    'GPU',
+    'GeForce RTX 2080',
+    'GeForce RTX 4070 Ti SUPER',
+    '発売されたばかりで気になってしまった',
+  ],
+  [
+    '2024/03/12',
+    'Fドライブ',
+    'Samsung SSD 860 EVO 1TB (SATA)',
+    'Samsung SSD 990 PRO 2TB (M.2 Type2280)',
+    null,
+  ],
+  ['2024/07/15', 'ケース', 'Define R5', 'Define 7', null],
+  [
+    '2024/08/16',
+    'M/B',
+    'PRIME H670-PLUS D4',
+    'TUF GAMING Z790-PLUS WIFI D4',
+    <>
+      VRMフェーズが8から16+1に増え、さらにヒートシンクも付いた
+      <br />
+      CPUへの電力供給が安定し、持続的にフルロードできるようになった
+    </>,
+  ],
+  [
+    '2025/02/28',
+    '電源',
+    '玄人志向 KRPW-GK750W/90+',
+    'FSP HG2-1000.GEN5',
+    '1000Wで余裕が生まれ、また12VHPWRを変換せずそのまま使えるようになった',
+  ],
 ]
 
 export const Main3rdSpec: React.FC = () => (
@@ -29,36 +80,8 @@ export const Main3rdSpec: React.FC = () => (
 
     <p>CPUやM/B以外ほぼすべてを流用しました</p>
 
-    <ul>
-      <li>
-        2023/04/30に雑多なファイルを保存しているEドライブのSATA SSDをM.2へ換装
-      </li>
-      <li>
-        同年05/28にドキュメント等を保存しているDドライブの3TB HDDを4TBのSATA
-        SSDに換装
-      </li>
-      <li>
-        2024/01/30に発売されたばかりのRTX4070 Ti
-        SUPERが気になってしまい購入。RTX2080から換装
-      </li>
-      <li>
-        同年03/12にFドライブのSamsung SSD 860 EVO 1TB (SATA)をM.2の2TBに換装
-      </li>
-      <li>同年07/15にケースをDefineR5からDefine7に換装</li>
-      <li>
-        同年08/16にM/Bを<code>H670-PLUS D4</code>から
-        <code>Z790-PLUS WIFI D4</code>に換装
-        <br />
-        VRMフェーズが8から16+1に増え、さらにヒートシンクも付いた
-        <br />
-        そのためCPUへの電力供給が安定し持続的にフルロードできるようになった
-      </li>
-      <li>
-        2025/02/28に電源を<code>KRPW-GK750W/90+</code>から
-        <code>HG2-1000.GEN5</code>に換装
-        <br />
-        1000Wで余裕が生まれ、また12VHPWRを変換せずそのまま使えるようになった
-      </li>
-    </ul>
+    <Accordion title="換装履歴">
+      <Table enableHeader data={replaceLog} />
+    </Accordion>
   </Accordion>
 )
