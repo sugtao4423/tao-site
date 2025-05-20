@@ -10,8 +10,8 @@ const specs: TableData<2> = [
   ['CPU', 'Xeon Gold 5118 2.3GHz x2'],
   ['メモリ', 'DDR4 ECC 256GB (32GBx8)'],
   ['SSD', 'HPE Smart Array P408i-a SR Gen10 (RAID1 Triple)'],
-  [null, 'Samsung 860 EVO 1TB (SATA) x2'],
-  [null, 'Samsung 870 EVO 1TB (SATA) x1'],
+  [null, 'Samsung SSD 860 EVO 1TB (SATA) x2'],
+  [null, 'Samsung SSD 870 EVO 1TB (SATA) x1'],
 ]
 
 const replaceLog: TableData<5> = [
@@ -23,12 +23,12 @@ const replaceLog: TableData<5> = [
     'DDR4 ECC 256GB (32GBx8)',
     '12レーンも余っていたため買い足し',
   ],
-  ['購入時', 'SSD', null, 'Samsung 860 EVO 1TB (SATA) x2', '旧鯖から流用'],
+  ['購入時', 'SSD', null, 'Samsung SSD 860 EVO 1TB (SATA) x2', '旧鯖から流用'],
   [
     '購入時',
     'SSD',
     null,
-    'Samsung 870 EVO 1TB (SATA) x1',
+    'Samsung SSD 870 EVO 1TB (SATA) x1',
     'マウンタとともに新規追加',
   ],
 ]

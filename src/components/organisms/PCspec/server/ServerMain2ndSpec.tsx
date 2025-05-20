@@ -9,7 +9,7 @@ const specs: TableData<2> = [
   ['型名', 'N8100-2124Y'],
   ['CPU', 'Xeon E5-2420v2 2.20GHz x2'],
   ['メモリ', 'DDR3 ECC 120GB (16GBx4, 8GBx6, 4GBx2)'],
-  ['SSD', 'Samsung 860 EVO 1TB (SATA) x2 (RAID1)'],
+  ['SSD', 'Samsung SSD 860 EVO 1TB (SATA) x2 (RAID1)'],
 ]
 
 const replaceLog: TableData<5> = [
@@ -25,7 +25,7 @@ const replaceLog: TableData<5> = [
     '購入時',
     'SSD',
     'HDD 300GB (SAS) x2',
-    'Samsung 860 EVO 1TB (SATA) x2',
+    'Samsung SSD 860 EVO 1TB (SATA) x2',
     '2.5インチしか搭載できないのでSSDを新調',
   ],
 ]
