@@ -23,12 +23,43 @@ const specs: TableData<2> = [
 
 const replaceLog: TableData<5> = [
   ['日付', '種別', '換装前', '換装後', '備考'],
+  ['組み直し時', 'メモリ', null, 'DDR4 64GB (16GBx4)', '旧メイン機から流用'],
+  [
+    '組み直し時',
+    'Dドライブ',
+    null,
+    'WD Red 3TB WD30EFRX (SATA)',
+    '旧メイン機から流用',
+  ],
+  [
+    '組み直し時',
+    'Eドライブ',
+    null,
+    'Samsung SSD 850 EVO 250GB (SATA)',
+    '旧メイン機から流用',
+  ],
+  [
+    '組み直し時',
+    'Fドライブ',
+    null,
+    'Samsung SSD 860 EVO 1TB (SATA)',
+    '旧メイン機から流用',
+  ],
+  ['組み直し時', 'GPU', null, 'GeForce RTX 2080', '旧メイン機から流用'],
+  [
+    '組み直し時',
+    '電源',
+    null,
+    '玄人志向 KRPW-GK750W/90+',
+    '旧メイン機から流用',
+  ],
+  ['組み直し時', 'ケース', null, 'Define R5', '旧メイン機から流用'],
   [
     '2023/04/30',
     'Eドライブ',
     'Samsung SSD 850 EVO 250GB (SATA)',
     'Samsung SSD 960 EVO 250GB (M.2 Type2280)',
-    null,
+    'M.2にするために旧メイン機のCドライブから流用',
   ],
   [
     '2023/05/28',
