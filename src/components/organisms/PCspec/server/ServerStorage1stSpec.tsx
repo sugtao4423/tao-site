@@ -5,6 +5,7 @@ import { Table } from '@/components/molecules/Table/Table'
 import styles from '../spec.module.scss'
 
 const specs: TableData<2> = [
+  ['商品名', 'HP ProLiant MicroServer Turion II NEO N5'],
   ['CPU', 'AMD Turion II Neo N54L Dual-Core'],
   ['メモリ', 'DDR3 1333MHz 16GB (8GBx2)'],
   ['HDD', 'WD Black 500GB MB0500EBNCR (SATA)'],
@@ -35,8 +36,16 @@ const replaceLog: TableData<5> = [
 ]
 
 export const ServerStorage1stSpec: React.FC = () => (
-  <Accordion title="ストレージサーバー（マイクロサーバー）">
-    <p>HP ProLiant MicroServer Turion II NEO N5</p>
+  <Accordion title="ストレージサーバー（第1世代NAS）">
+    <p>
+      <strong>現在はHDDを流用して新しいNASになっています</strong>
+    </p>
+
+    <p>
+      2025/05/24に引退しました
+      <br />
+      10年もの間ありがとう
+    </p>
 
     <Table className={styles.table} data={specs} />
 
