@@ -1,11 +1,8 @@
 import { KancolleBattleBgmData } from '@/common/interfaces/kancolle-urls'
-import { keys, serverIps } from '@/services/products/kancolle-urls-const'
+import { keys } from '@/services/products/kancolle-urls-const'
 
 export class KancolleUrlsService {
-  private static get serverOrigin(): string {
-    const ip = serverIps[Math.floor(Math.random() * serverIps.length)]
-    return `http://${ip}`
-  }
+  private static serverOrigin = 'http://w12p.kancolle-server.com'
 
   public static voiceUrl(
     shipId: number,

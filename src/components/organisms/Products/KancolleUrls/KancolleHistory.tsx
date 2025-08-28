@@ -33,6 +33,7 @@ export const KancolleHistory: React.FC<PropsWithClassName> = (props) => (
       <p>なにがあっても責任は負いません</p>
 
       <ul>
+        <li>2025/08/28 リソースURLをIPからドメインに変更</li>
         <li>2023/11/08 最新のデータに更新</li>
         <li>2020/02/15 最新のデータに更新</li>
         <li>2020/02/02 戦闘BGMを追加</li>
