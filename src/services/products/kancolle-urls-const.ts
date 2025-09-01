@@ -1,3 +1,27 @@
+export const serverDomains = [
+  'w00g.kancolle-server.com',
+  'w01y.kancolle-server.com',
+  'w02k.kancolle-server.com',
+  'w03s.kancolle-server.com',
+  'w04m.kancolle-server.com',
+  'w05o.kancolle-server.com',
+  'w06t.kancolle-server.com',
+  'w07l.kancolle-server.com',
+  'w08r.kancolle-server.com',
+  'w09s.kancolle-server.com',
+  'w10b.kancolle-server.com',
+  'w11t.kancolle-server.com',
+  'w12p.kancolle-server.com',
+  'w13b.kancolle-server.com',
+  'w14h.kancolle-server.com',
+  'w15p.kancolle-server.com',
+  'w16s.kancolle-server.com',
+  'w17k.kancolle-server.com',
+  'w18i.kancolle-server.com',
+  'w19s.kancolle-server.com',
+  'w20h.kancolle-server.com',
+]
+
 export const keys = {
   resource: [
     6657, 5699, 3371, 8909, 7719, 6229, 5449, 8561, 2987, 5501, 3127, 9319,
