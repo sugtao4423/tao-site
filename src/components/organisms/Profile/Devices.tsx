@@ -20,7 +20,7 @@ const data: Data[] = [
   {
     title: '所持端末一覧',
     data: DeviceItems,
-    note: 'Y!mobileのSIMをPixel 9に挿入♂して使ってます',
+    note: 'Y!mobileのSIMをPixel 10 Proに挿入♂して使ってます',
   },
   {
     title: '文鎮端末一覧',
