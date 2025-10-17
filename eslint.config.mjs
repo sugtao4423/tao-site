@@ -164,6 +164,17 @@ export default tseslint.config(
     },
   },
   {
+    name: 'sugtao4423/ignore-files',
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'build/**',
+      'eslint.config.mjs',
+      'next-env.d.ts',
+    ],
+  },
+  {
     name: 'sugtao4423/ignore',
     rules: {
       '@typescript-eslint/consistent-type-definitions': 'off',
