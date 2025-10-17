@@ -2,7 +2,7 @@
 
 import eslint from '@eslint/js'
 import pluginNext from '@next/eslint-plugin-next'
-import pluginStylisticTs from '@stylistic/eslint-plugin-ts'
+import pluginStylistic from '@stylistic/eslint-plugin'
 import configPrettier from 'eslint-config-prettier'
 import pluginImport from 'eslint-plugin-import'
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
@@ -64,10 +64,10 @@ export default tseslint.config(
   },
   {
     name: 'sugtao4423/@stylistic',
-    plugins: { '@stylistic/ts': pluginStylisticTs },
+    plugins: { '@stylistic': pluginStylistic },
     rules: {
-      '@stylistic/ts/quotes': ['error', 'single', { avoidEscape: true }],
-      '@stylistic/ts/lines-around-comment': [
+      '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
+      '@stylistic/lines-around-comment': [
         'error',
         {
           beforeBlockComment: true,
