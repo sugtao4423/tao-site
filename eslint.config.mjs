@@ -1,8 +1,9 @@
 // @ts-check
 
 import eslint from '@eslint/js'
-import pluginNext from '@next/eslint-plugin-next'
 import pluginStylistic from '@stylistic/eslint-plugin'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
 import configPrettier from 'eslint-config-prettier'
 import pluginImport from 'eslint-plugin-import'
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
@@ -14,14 +15,21 @@ import tseslint from 'typescript-eslint'
 export default tseslint.config(
   { name: 'react/recommended', ...pluginReact.configs.flat.recommended },
   { name: 'react/jsx-runtime', ...pluginReact.configs.flat['jsx-runtime'] },
-  pluginReactHooks.configs['recommended-latest'],
-  pluginJsxA11y.flatConfigs.recommended,
-  pluginNext.flatConfig.coreWebVitals,
+  pluginReactHooks.configs.flat['recommended-latest'],
+  {
+    name: pluginJsxA11y.flatConfigs.recommended.name,
+    rules: pluginJsxA11y.flatConfigs.recommended.rules,
+  },
+  ...nextVitals,
+  ...nextTs,
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  pluginImport.flatConfigs.recommended,
-  { name: 'import/typescript', ...pluginImport.flatConfigs.typescript },
+  { rules: pluginImport.flatConfigs.recommended.rules },
+  {
+    name: 'import/typescript',
+    rules: pluginImport.flatConfigs.typescript.rules,
+  },
   { name: 'eslint-config-prettier', ...configPrettier },
   {
     languageOptions: {
