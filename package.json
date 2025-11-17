@@ -10,6 +10,7 @@
     "start": "next start",
     "start:standalone": "node .next/standalone/server.js",
     "lint": "eslint --max-warnings=0 .",
+    "lint:inspect": "eslint --inspect-config",
     "stylelint": "stylelint '{**/*,*}.{css,scss}'",
     "stylelint:fix": "stylelint --fix '{**/*,*}.{css,scss}'",
     "prettier": "prettier --check '{**/*,*}.{js,jsx,mjs,ts,tsx,css,scss,json}'",
