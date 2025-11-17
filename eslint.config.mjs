@@ -1,5 +1,6 @@
 // @ts-check
 
+import { defineConfig, globalIgnores } from 'eslint/config'
 import eslint from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
 import nextVitals from 'eslint-config-next/core-web-vitals'
@@ -12,7 +13,7 @@ import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginUnusedImports from 'eslint-plugin-unused-imports'
 import tseslint from 'typescript-eslint'
 
-export default tseslint.config(
+export default defineConfig([
   {
     name: 'react/recommended',
     ...pluginReact.configs.flat.recommended,
@@ -181,17 +182,13 @@ export default tseslint.config(
       'unused-imports/no-unused-imports': 'error',
     },
   },
-  {
-    name: 'sugtao4423/ignore-files',
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'eslint.config.mjs',
-      'next-env.d.ts',
-    ],
-  },
+  globalIgnores([
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    'eslint.config.mjs',
+  ]),
   {
     name: 'sugtao4423/ignore',
     rules: {
@@ -220,5 +217,5 @@ export default tseslint.config(
     rules: {
       'import/no-default-export': 'off',
     },
-  }
-)
+  },
+])
