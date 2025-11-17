@@ -4,7 +4,7 @@ import eslint from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
 import nextVitals from 'eslint-config-next/core-web-vitals'
 import nextTs from 'eslint-config-next/typescript'
-import configPrettier from 'eslint-config-prettier'
+import configPrettier from 'eslint-config-prettier/flat'
 import pluginImport from 'eslint-plugin-import'
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 import pluginReact from 'eslint-plugin-react'
@@ -13,34 +13,44 @@ import pluginUnusedImports from 'eslint-plugin-unused-imports'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  { name: 'react/recommended', ...pluginReact.configs.flat.recommended },
-  { name: 'react/jsx-runtime', ...pluginReact.configs.flat['jsx-runtime'] },
-  pluginReactHooks.configs.flat['recommended-latest'],
+  {
+    name: 'react/recommended',
+    ...pluginReact.configs.flat.recommended,
+  },
+  {
+    name: 'react/jsx-runtime',
+    ...pluginReact.configs.flat['jsx-runtime'],
+  },
+  {
+    name: 'react-hooks/recommended-latest',
+    ...pluginReactHooks.configs.flat['recommended-latest'],
+  },
   {
     name: pluginJsxA11y.flatConfigs.recommended.name,
     rules: pluginJsxA11y.flatConfigs.recommended.rules,
   },
   ...nextVitals,
   ...nextTs,
-  eslint.configs.recommended,
+  {
+    name: 'eslint/recommended',
+    ...eslint.configs.recommended,
+  },
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  { rules: pluginImport.flatConfigs.recommended.rules },
+  {
+    name: 'import/recommended',
+    rules: pluginImport.flatConfigs.recommended.rules,
+  },
   {
     name: 'import/typescript',
     rules: pluginImport.flatConfigs.typescript.rules,
   },
-  { name: 'eslint-config-prettier', ...configPrettier },
+  configPrettier,
   {
+    name: 'typescript-eslint/language-options',
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-    settings: {
-      'import/resolver': {
-        typescript: { project: import.meta.dirname },
       },
     },
   },
