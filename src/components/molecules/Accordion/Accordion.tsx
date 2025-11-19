@@ -14,6 +14,7 @@ type Props = {
 
 export const Accordion: React.FC<Props> = (props) => {
   const accordion = useAccordion()
+  /* eslint-disable react-hooks/refs */
   return (
     <details
       className={classNames(props.className, styles.details)}
@@ -32,4 +33,5 @@ export const Accordion: React.FC<Props> = (props) => {
       </div>
     </details>
   )
+  /* eslint-enable react-hooks/refs */
 }
