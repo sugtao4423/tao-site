@@ -1,9 +1,11 @@
 // @ts-check
 
+import { defineConfig, globalIgnores } from 'eslint/config'
 import eslint from '@eslint/js'
-import pluginNext from '@next/eslint-plugin-next'
 import pluginStylistic from '@stylistic/eslint-plugin'
-import configPrettier from 'eslint-config-prettier'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
+import configPrettier from 'eslint-config-prettier/flat'
 import pluginImport from 'eslint-plugin-import'
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 import pluginReact from 'eslint-plugin-react'
@@ -11,28 +13,45 @@ import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginUnusedImports from 'eslint-plugin-unused-imports'
 import tseslint from 'typescript-eslint'
 
-export default tseslint.config(
-  { name: 'react/recommended', ...pluginReact.configs.flat.recommended },
-  { name: 'react/jsx-runtime', ...pluginReact.configs.flat['jsx-runtime'] },
-  pluginReactHooks.configs['recommended-latest'],
-  pluginJsxA11y.flatConfigs.recommended,
-  pluginNext.flatConfig.coreWebVitals,
-  eslint.configs.recommended,
+export default defineConfig([
+  {
+    name: 'react/recommended',
+    ...pluginReact.configs.flat.recommended,
+  },
+  {
+    name: 'react/jsx-runtime',
+    ...pluginReact.configs.flat['jsx-runtime'],
+  },
+  {
+    name: 'react-hooks/recommended-latest',
+    ...pluginReactHooks.configs.flat['recommended-latest'],
+  },
+  {
+    name: pluginJsxA11y.flatConfigs.recommended.name,
+    rules: pluginJsxA11y.flatConfigs.recommended.rules,
+  },
+  ...nextVitals,
+  ...nextTs,
+  {
+    name: 'eslint/recommended',
+    ...eslint.configs.recommended,
+  },
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  pluginImport.flatConfigs.recommended,
-  { name: 'import/typescript', ...pluginImport.flatConfigs.typescript },
-  { name: 'eslint-config-prettier', ...configPrettier },
   {
+    name: 'import/recommended',
+    rules: pluginImport.flatConfigs.recommended.rules,
+  },
+  {
+    name: 'import/typescript',
+    rules: pluginImport.flatConfigs.typescript.rules,
+  },
+  configPrettier,
+  {
+    name: 'typescript-eslint/language-options',
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-    settings: {
-      'import/resolver': {
-        typescript: { project: import.meta.dirname },
       },
     },
   },
@@ -163,17 +182,13 @@ export default tseslint.config(
       'unused-imports/no-unused-imports': 'error',
     },
   },
-  {
-    name: 'sugtao4423/ignore-files',
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'eslint.config.mjs',
-      'next-env.d.ts',
-    ],
-  },
+  globalIgnores([
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    'eslint.config.mjs',
+  ]),
   {
     name: 'sugtao4423/ignore',
     rules: {
@@ -202,5 +217,5 @@ export default tseslint.config(
     rules: {
       'import/no-default-export': 'off',
     },
-  }
-)
+  },
+])
