@@ -8,7 +8,8 @@ $border-radius: 8px;
   $padding-y: 1rem;
   $padding-x: 0.8rem;
 
-  padding: if($mini-y, calc($padding-y * 0.5), $padding-y) $padding-x;
+  padding: if(sass($mini-y): calc($padding-y * 0.5) ; else: $padding-y)
+    $padding-x;
 
   @include breakpoints.media-up(md) {
     padding-right: calc($padding-x * 1.5);
