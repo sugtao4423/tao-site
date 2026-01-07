@@ -1,6 +1,6 @@
 'use client'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassChildren } from '@/@types/react'
 import { SquareArrowIcon } from '@/components/icons/SquareArrowIcon'
@@ -17,7 +17,7 @@ export const Accordion: React.FC<Props> = (props) => {
   /* eslint-disable react-hooks/refs */
   return (
     <details
-      className={classNames(props.className, styles.details)}
+      className={clsx(props.className, styles.details)}
       ref={accordion.details}
     >
       <summary

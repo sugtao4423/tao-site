@@ -1,11 +1,11 @@
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassName } from '@/@types/react'
 
 import styles from './kancolleHistory.module.scss'
 
 export const KancolleHistory: React.FC<PropsWithClassName> = (props) => (
-  <div className={classNames(styles.history, props.className)}>
+  <div className={clsx(styles.history, props.className)}>
     <div className="container">
       <p>
         <code>/kcs2/js/main.js?version=4.5.3.1</code>

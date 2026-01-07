@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { DrawerData } from '@/common/interfaces/drawer'
 import { BarIcon } from '@/components/icons/BarIcon'
@@ -24,15 +24,15 @@ export const Drawer: React.FC<Props> = (props) => {
   return (
     <div>
       <BarIcon
-        className={classNames(styles.menu, {
+        className={clsx(styles.menu, {
           [styles.menuBorder]: props.menuBorder,
         })}
         onClick={onOpen}
       />
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
-      {open && <div className={classNames(styles.mask)} onClick={onClose} />}
+      {open && <div className={styles.mask} onClick={onClose} />}
       <div
-        className={classNames(styles.drawer, {
+        className={clsx(styles.drawer, {
           [styles.open]: open,
         })}
       >

@@ -1,6 +1,6 @@
 import { useId } from 'react'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 type Props = {
   label: string
@@ -16,7 +16,7 @@ export const LabelInput: React.FC<Props> = (props) => {
       </label>
       <input
         {...inputProps}
-        className={classNames('form-control', props.className)}
+        className={clsx('form-control', props.className)}
         id={id}
       />
     </>

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { H2 } from '@/components/atoms/Heading/H2'
 import { ProductCard } from '@/components/molecules/Card/ProductCard'
@@ -23,7 +23,7 @@ export default function Page(): React.ReactNode {
           <ProductCard
             key={item.href}
             asNewTab={item.asNewTab}
-            className={classNames('col-12 col-md-8', styles.item)}
+            className={clsx('col-12 col-md-8', styles.item)}
             href={item.href}
             note={item.note}
             title={item.title}

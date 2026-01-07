@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassChildren } from '@/@types/react'
 
@@ -19,7 +19,7 @@ export const LinkCard: React.FC<Props> = (props) => {
   return (
     <div className={props.className}>
       <Link
-        className={classNames(styles.card, props.innerClassName)}
+        className={clsx(styles.card, props.innerClassName)}
         href={props.href}
         rel={rel}
         target={target}

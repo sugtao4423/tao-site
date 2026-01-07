@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassName } from '@/@types/react'
 import { LabelInput } from '@/components/atoms/Input/LabelInput'
@@ -15,9 +15,9 @@ export const BaseConvert: React.FC<PropsWithClassName> = (props) => {
   const service = useMemo(() => new BaseConvertService(setNum), [])
 
   return (
-    <div className={classNames('row', props.className)}>
+    <div className={clsx('row', props.className)}>
       {service.items.map((item) => (
-        <div key={item.base} className={classNames('col-6', styles.col)}>
+        <div key={item.base} className={clsx('col-6', styles.col)}>
           <LabelInput
             autoFocus={item.autoFocus}
             label={`${item.base}進数`}

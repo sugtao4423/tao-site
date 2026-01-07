@@ -69,6 +69,12 @@ export default defineConfig([
               name: 'next/router',
               message: "Please use 'next/navigation' instead.",
             },
+            {
+              name: 'clsx',
+              importNames: ['default'],
+              message:
+                'Please use the named import \'import { clsx } from "clsx"\' instead.',
+            },
           ],
         },
       ],

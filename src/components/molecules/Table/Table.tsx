@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassName } from '@/@types/react'
 import { TableData } from '@/common/interfaces/table'
@@ -16,9 +16,9 @@ export const Table: React.FC<Props> = (props) => {
   const tbody = props.enableHeader ? props.data.slice(1) : props.data
 
   return (
-    <div className={classNames(styles.wrapper, props.className)}>
+    <div className={clsx(styles.wrapper, props.className)}>
       <table
-        className={classNames(styles.table, {
+        className={clsx(styles.table, {
           [styles.noVerticalDivider]: props.noVerticalDivider,
         })}
       >

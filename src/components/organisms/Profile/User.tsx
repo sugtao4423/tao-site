@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassName } from '@/@types/react'
 import { Icon } from '@/components/atoms/Image/Icon'
@@ -27,7 +27,7 @@ const LinkItems = [
 ]
 
 export const User: React.FC<PropsWithClassName> = (props) => (
-  <div className={classNames(props.className, styles.wrapper)}>
+  <div className={clsx(props.className, styles.wrapper)}>
     <Icon className={styles.icon} />
     <h1 className={styles.userName}>tao</h1>
     <h2 className={styles.screenName}>@sugtao4423</h2>

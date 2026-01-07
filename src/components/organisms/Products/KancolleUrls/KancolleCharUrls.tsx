@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { KancolleShipData } from '@/common/interfaces/kancolle-urls'
 import { H2 } from '@/components/atoms/Heading/H2'
@@ -49,7 +49,7 @@ export const KancolleCharUrls: React.FC<Props> = (props) => {
             voiceItems.map((item) => (
               <div
                 key={item.id}
-                className={classNames('col-6 col-sm-4 col-lg-3', styles.item)}
+                className={clsx('col-6 col-sm-4 col-lg-3', styles.item)}
               >
                 <a
                   href={KancolleUrlsService.voiceUrl(
@@ -74,7 +74,7 @@ export const KancolleCharUrls: React.FC<Props> = (props) => {
             pictureItems.map((item) => (
               <div
                 key={item.id}
-                className={classNames('col-6 col-sm-4 col-lg-3', styles.item)}
+                className={clsx('col-6 col-sm-4 col-lg-3', styles.item)}
               >
                 <a
                   href={KancolleUrlsService.pictureUrl(ship.id, item.id)}

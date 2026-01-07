@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 import { parseAsString, useQueryStates } from 'nuqs'
 
 import { PropsWithClassName } from '@/@types/react'
@@ -50,8 +50,8 @@ export const ServerStatus: React.FC<Props> = (props) => {
   }
 
   return (
-    <div className={classNames('row', styles.row, props.className)}>
-      <div className={classNames('col-12 col-sm-6', styles.hostSelector)}>
+    <div className={clsx('row', styles.row, props.className)}>
+      <div className={clsx('col-12 col-sm-6', styles.hostSelector)}>
         <select
           className="form-select"
           value={hostId ?? ''}
@@ -64,7 +64,7 @@ export const ServerStatus: React.FC<Props> = (props) => {
           ))}
         </select>
       </div>
-      <div className={classNames('col-12 col-sm-6', styles.graphSelector)}>
+      <div className={clsx('col-12 col-sm-6', styles.graphSelector)}>
         <select
           className="form-select"
           value={graphId ?? ''}

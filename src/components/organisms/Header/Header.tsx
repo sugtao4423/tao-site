@@ -1,5 +1,3 @@
-import classNames from 'classnames'
-
 import { DrawerData } from '@/common/interfaces/drawer'
 import { StripBanner } from '@/components/atoms/Image/StripBanner'
 import { Drawer } from '@/components/organisms/Drawer/Drawer'
@@ -15,7 +13,7 @@ export const Header: React.FC<Props> = (props) => (
   <header>
     <div className={styles.bannerWrapper}>
       <StripBanner className={styles.banner} />
-      <h1 className={classNames(styles.title)}>{props.title}</h1>
+      <h1 className={styles.title}>{props.title}</h1>
     </div>
     <Drawer menuBorder data={props.drawerData} />
   </header>

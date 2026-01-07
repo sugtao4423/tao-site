@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassName } from '@/@types/react'
 import { H3 } from '@/components/atoms/Heading/H3'
@@ -40,8 +40,8 @@ export const TimePlus: React.FC<PropsWithClassName> = (props) => {
 
   return (
     <div className={props.className}>
-      <div className={classNames('row', styles.row)}>
-        <div className={classNames('col-4', styles.resetWrapper)}>
+      <div className={clsx('row', styles.row)}>
+        <div className={clsx('col-4', styles.resetWrapper)}>
           <button
             className="btn btn-outline-info"
             type="button"
@@ -53,16 +53,13 @@ export const TimePlus: React.FC<PropsWithClassName> = (props) => {
         <div className="col-8 col-md-4">
           <input
             readOnly
-            className={classNames(
-              'form-control form-control-lg',
-              styles.resultInput
-            )}
+            className={clsx('form-control form-control-lg', styles.resultInput)}
             type="text"
             value={TimePlusService.secToTime(total)}
           />
         </div>
       </div>
-      <div className={classNames('row', styles.row)}>
+      <div className={clsx('row', styles.row)}>
         {[
           { ph: 'hour', val: hours, change: setHours, ref: hoursRef },
           { ph: 'min', val: minutes, change: setMinutes },

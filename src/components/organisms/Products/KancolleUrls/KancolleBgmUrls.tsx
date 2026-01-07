@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import { clsx } from 'clsx'
 
 import { PropsWithClassName } from '@/@types/react'
 import {
@@ -25,7 +25,7 @@ export const KancolleBgmUrls: React.FC<Props> = (props) => (
         {props.portBgms.map((bgm) => (
           <div
             key={bgm.id}
-            className={classNames('col-6 col-md-4 col-lg-3', styles.item)}
+            className={clsx('col-6 col-md-4 col-lg-3', styles.item)}
           >
             <a
               href={KancolleUrlsService.bgmLink(bgm.id, 'port')}
@@ -44,7 +44,7 @@ export const KancolleBgmUrls: React.FC<Props> = (props) => (
         {props.battleBgms.map((bgm) => (
           <div
             key={bgm.id}
-            className={classNames('col-6 col-md-4 col-xl-3', styles.item)}
+            className={clsx('col-6 col-md-4 col-xl-3', styles.item)}
           >
             <Accordion title={bgm.map_no.join('-')}>
               <div className="row">
