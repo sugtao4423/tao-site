@@ -20,7 +20,7 @@ export abstract class ZabbixRepository {
     auth?: string
   ): Promise<T> {
     const id = Math.floor(Math.random() * 114514) + 1
-    const url = `${ZABBIX_URL}/api_jsonrpc.php`
+    const path = '/api_jsonrpc.php'
     const headers: AxiosRequestConfig['headers'] = {
       'Content-Type': 'application/json-rpc',
     }
@@ -34,7 +34,8 @@ export abstract class ZabbixRepository {
       id,
     }
 
-    const res = await axios.post<ZabbixBaseResponse<T>>(url, body, {
+    const res = await axios.post<ZabbixBaseResponse<T>>(path, body, {
+      baseURL: ZABBIX_URL,
       headers,
     })
     if (res.data.error) {
@@ -84,15 +85,18 @@ export abstract class ZabbixRepository {
    * @throws Error if login failed
    */
   protected static async loginWeb(): Promise<string> {
-    const url = `${ZABBIX_URL}/index.php`
-    const headers = { 'Content-Type': 'application/x-www-form-urlencoded' }
+    const path = '/index.php'
+    const headers: AxiosRequestConfig['headers'] = {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    }
     const body = {
       name: ZABBIX_USER,
       password: ZABBIX_PASS,
       enter: 'Sign in',
     }
 
-    const res = await axios.post(url, body, {
+    const res = await axios.post(path, body, {
+      baseURL: ZABBIX_URL,
       headers,
       maxRedirects: 0,
       validateStatus: (status) => status >= 200 && status <= 302,

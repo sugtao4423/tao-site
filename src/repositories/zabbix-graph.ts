@@ -18,19 +18,19 @@ export class ZabbixGraphRepository extends ZabbixRepository {
     graphId: string
   ): Promise<ArrayBuffer> {
     const path = graphType === '2' ? 'chart6.php' : 'chart2.php'
-    const baseUrl = `${ZABBIX_URL}/${path}`
-    const params = new URLSearchParams({
+    const params = {
       graphid: graphId,
       profileIdx: 'web.graphs.filter',
       from: 'now-2d',
       to: 'now',
-    })
-    const url = `${baseUrl}?${params.toString()}`
+    }
 
     let session = ''
     try {
       session = await this.loginWeb()
-      const res = await axios.get<ArrayBuffer>(url, {
+      const res = await axios.get<ArrayBuffer>(path, {
+        baseURL: ZABBIX_URL,
+        params,
         responseType: 'arraybuffer',
         headers: {
           Cookie: `zbx_session=${session}`,
