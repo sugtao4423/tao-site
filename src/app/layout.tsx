@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout(props: PropsWithChildren): React.ReactNode {
   return (
-    <html lang="ja">
+    <html data-scroll-behavior="smooth" lang="ja">
       <body>
         <GaScript />
         <NuqsAdapter>{props.children}</NuqsAdapter>
