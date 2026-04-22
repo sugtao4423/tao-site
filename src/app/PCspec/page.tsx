@@ -10,7 +10,8 @@ import { Main3rdSpec } from '@/components/organisms/PCspec/Main3rdSpec'
 import { ServerMain1stSpec } from '@/components/organisms/PCspec/server/ServerMain1stSpec'
 import { ServerMain2ndSpec } from '@/components/organisms/PCspec/server/ServerMain2ndSpec'
 import { ServerMain3rdSpec } from '@/components/organisms/PCspec/server/ServerMain3rdSpec'
-import { ServerRaspiSpec } from '@/components/organisms/PCspec/server/ServerRaspiSpec'
+import { ServerRaspi1stSpec } from '@/components/organisms/PCspec/server/ServerRaspi1stSpec'
+import { ServerRaspi2ndSpec } from '@/components/organisms/PCspec/server/ServerRaspi2ndSpec'
 import { ServerStorage1stSpec } from '@/components/organisms/PCspec/server/ServerStorage1stSpec'
 import { ServerStorage2ndSpec } from '@/components/organisms/PCspec/server/ServerStorage2ndSpec'
 import { CommonLayout } from '@/layouts/CommonLayout'
@@ -33,11 +34,12 @@ export default function Page(): React.ReactNode {
         <H2 className={styles.mt}>Servers</H2>
         <ServerMain3rdSpec />
         <ServerStorage2ndSpec />
-        <ServerRaspiSpec />
+        <ServerRaspi2ndSpec />
       </div>
 
       <div>
         <H2 className={styles.mt}>引退済み</H2>
+        <ServerRaspi1stSpec />
         <ServerStorage1stSpec />
         <ServerMain2ndSpec />
         <ServerMain1stSpec />
