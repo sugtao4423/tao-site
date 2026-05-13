@@ -23,6 +23,7 @@ export const AutoReloadImage: React.FC<Props> = (props) => {
   }, [props.src])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSrc(getTimestampUrl())
   }, [getTimestampUrl])
 
