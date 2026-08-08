@@ -72,27 +72,23 @@ export class KancolleUrlsRepository {
    * Get ship data.
    */
   public getShipData(): KancolleShipData[] {
-    return this.apiData.api_mst_ship.map(
-      (ship): KancolleShipData => ({
-        id: ship.api_id,
-        name: ship.api_name,
-        yomi: ship.api_yomi,
-        code: this.getShipCode(ship.api_id),
-        introduction: KancolleUrlsRepository.getShipIntroduction(ship),
-      })
-    )
+    return this.apiData.api_mst_ship.map((ship): KancolleShipData => ({
+      id: ship.api_id,
+      name: ship.api_name,
+      yomi: ship.api_yomi,
+      code: this.getShipCode(ship.api_id),
+      introduction: KancolleUrlsRepository.getShipIntroduction(ship),
+    }))
   }
 
   /**
    * Get port BGM data.
    */
   public getPortBgmData(): KancollePortBgmData[] {
-    return this.apiData.api_mst_bgm.map(
-      (bgm): KancollePortBgmData => ({
-        id: bgm.api_id,
-        name: bgm.api_name,
-      })
-    )
+    return this.apiData.api_mst_bgm.map((bgm): KancollePortBgmData => ({
+      id: bgm.api_id,
+      name: bgm.api_name,
+    }))
   }
 
   /**
