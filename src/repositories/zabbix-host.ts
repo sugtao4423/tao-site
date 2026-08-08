@@ -11,19 +11,15 @@ export class ZabbixHostRepository extends ZabbixRepository {
    * @returns Frontend hosts data
    */
   private static convert(data: ZabbixHostGraphResponse[]): ZabbixHost[] {
-    return data.map(
-      (host): ZabbixHost => ({
-        id: host.hostid,
-        name: host.name,
-        graphs: host.graphs.map(
-          (graph): ZabbixGraph => ({
-            id: graph.graphid,
-            name: graph.name,
-            type: graph.graphtype,
-          })
-        ),
-      })
-    )
+    return data.map((host): ZabbixHost => ({
+      id: host.hostid,
+      name: host.name,
+      graphs: host.graphs.map((graph): ZabbixGraph => ({
+        id: graph.graphid,
+        name: graph.name,
+        type: graph.graphtype,
+      })),
+    }))
   }
 
   /**
