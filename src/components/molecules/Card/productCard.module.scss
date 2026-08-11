@@ -2,6 +2,7 @@
 
 .card {
   display: flex;
+  gap: 0.8rem;
 }
 
 .icon {
@@ -9,12 +10,9 @@
   border-radius: 50%;
 }
 
-.content {
-  margin-left: 0.8rem;
-}
-
 .user {
   display: flex;
+  gap: 0.4rem;
   align-items: center;
   font-family: variables.$font-username;
   line-height: 1;
@@ -26,7 +24,6 @@
 }
 
 .screenName {
-  margin-left: 0.4rem;
   font-size: 0.85rem;
   font-weight: 600;
   color: variables.$color-gray-600;

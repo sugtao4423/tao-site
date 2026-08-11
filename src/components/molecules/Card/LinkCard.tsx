@@ -14,7 +14,7 @@ export const LinkCard: React.FC<Props> = (props) => (
     innerClassName={styles.card}
   >
     <div className={styles.icon}>{props.icon}</div>
-    <div className={styles.content}>
+    <div>
       <div className={styles.title}>{props.title}</div>
       {props.subtitle && (
         <div className={styles.subtitle}>{props.subtitle}</div>

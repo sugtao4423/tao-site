@@ -19,6 +19,7 @@ $border-radius: 8px;
 
 .summary {
   display: flex;
+  gap: 4px;
   align-items: center;
   list-style: none;
   @include details-padding(false);
@@ -32,10 +33,6 @@ $border-radius: 8px;
     width: 1.5em;
     transform: rotate(-90deg);
     transition: transform 0.2s ease-in-out;
-  }
-
-  & > .title {
-    margin-left: 4px;
   }
 }
 

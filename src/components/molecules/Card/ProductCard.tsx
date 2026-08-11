@@ -17,7 +17,7 @@ export const ProductCard: React.FC<Props> = (props) => (
     <div>
       <Icon className={styles.icon} />
     </div>
-    <div className={styles.content}>
+    <div>
       <div className={styles.user}>
         <div className={styles.name}>tao</div>
         <div className={styles.screenName}>@sugtao4423</div>
