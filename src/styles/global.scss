@@ -17,6 +17,20 @@
 @import '~bootstrap/scss/forms/input-group';
 @import '~bootstrap/scss/forms/form-select';
 
+:where(:root) {
+  text-autospace: normal;
+}
+
+:where(
+  pre,
+  time,
+  input:not([type='button' i], [type='submit' i], [type='reset' i]),
+  textarea,
+  [contenteditable]
+) {
+  text-autospace: no-autospace;
+}
+
 img {
   width: 100%;
   height: auto;
