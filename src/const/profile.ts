@@ -20,6 +20,7 @@ export const ProfileItem: ProfileData = {
       '昔からのフォロワーさんには "たおっぱい" とかで呼ばれてます',
     '元Android趣味アプリ開発者\n' +
       'Javaから始まりKotlinを書いていました\n' +
-      '最近は仕事でReactやFlutterを書いています',
+      '2020年8月から2026年8月まで仕事でFlutterやReact、Next.jsを書いていました\n' +
+      '最近は趣味でNext.jsや自宅サーバー、ネットワーク関連のことをやっています',
   ],
 }
